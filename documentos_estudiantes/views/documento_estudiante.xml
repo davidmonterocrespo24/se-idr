@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="documentos_estudiantes_form_view" model="ir.ui.view">
+            <field name="name">documentos_estudiantes_form_view</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='smart_button']" position="inside">
+                    <button class="oe_stat_button" name="documentos_views" type="object" icon="fa-folder-o" string="Documentos">
+
+                    </button>
+                </xpath>
+
+            </field>
+        </record>
+
+
+        <record id="view_dms_directory_kanban" model="ir.ui.view">
+            <field name="name">muk_dms_directory.kanban</field>
+            <field name="model">muk_dms.directory</field>
+            <field name="inherit_id" ref="muk_dms.view_dms_directory_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="partner_relacionado_id"/>
+                </xpath>
+                <xpath expr="//div[contains(@class, 'o_kanban_record_body')]" position="inside">
+                    <field name="partner_relacionado_id"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
