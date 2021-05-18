@@ -7,8 +7,8 @@ from odoo.exceptions import ValidationError
 class OpStudent(models.Model):
     _inherit = "op.student"
 
-    rfc = fields.Float(string='RFC', digits=(12, 2))
-    curp = fields.Float(string='CURP', digits=(12, 2))
+    rfc = fields.Char(string='RFC')
+    curp = fields.Char(string='CURP')
     registration_date = fields.Date('Fecha de registro', readonly=True,
                                     default=fields.Date.today())
     institutional_email = fields.Char('Email Institucional', size=256)
