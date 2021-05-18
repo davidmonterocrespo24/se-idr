@@ -18,7 +18,7 @@ class OpStudent(models.Model):
     def check_number_digits(self):
         for record in self:
             if record.enrollment_number and len(str(abs(record.enrollment_number)))< 11:
-                raise ValidationError("Enrollment number can't be less than 11")
+                raise ValidationError("Enrollment number can't be less than 10")
     
             
     
