@@ -20,5 +20,18 @@
                 </xpath>
             </field>
         </record>
+
+        <record id="se_view_op_student_kanban_inherit" model="ir.ui.view">
+            <field name="name">se.op.student.inherit.view.kanban</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.kanban_view_student"/>
+            <field name="arch" type="xml">
+               <xpath expr="//div[@class='oe_kanban_details']//ul" position="inside">
+                    <li t-if="record.category_id.raw_value">
+                        <field name="category_id"/>
+                    </li>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>
