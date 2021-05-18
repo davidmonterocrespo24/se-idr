@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_custom_addons/se-idr/se_openeducat_se_idr_custom_addons/se-idr/se_openeducat_se_idr,custom_addons/se-idr/se_openeducat_se_idr.custom_addons/se-idr/se_openeducat_se_idr,model_custom_addons/se-idr/se_openeducat_se_idr_custom_addons/se-idr/se_openeducat_se_idr,base.group_user,1,1,1,1
+acl_op_student,op_student_default,model_op_student,base.group_user,1,1,1,1

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="se_view_op_student_form_inherit" model="ir.ui.view">
+            <field name="name">se.op.student.inherit.view.form</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="rfc"/>
+                    <field name="curp"/>
+                </xpath>
+
+                <xpath expr="//field[@name='birth_date']" position="before">
+                    <field name="registration_date"/>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="institutional_email" widget="email"/>
+                    <field name="enrollment_number"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
