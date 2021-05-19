@@ -12,13 +12,15 @@ class OpStudent(models.Model):
     registration_date = fields.Date('Fecha de registro', readonly=True,
                                     default=fields.Date.today())
     institutional_email = fields.Char('Email Institucional', size=256)
-    enrollment_number = fields.Integer(string='Numero de Matrícula')
+    enrollment_number = fields.Char(string='Número de Matrícula', size=10)
 
     @api.constrains('enrollment_number')
     def check_number_digits(self):
         for record in self:
-            if record.enrollment_number and len(str(abs(record.enrollment_number)))< 11:
-                raise ValidationError("Enrollment number can't be less than 10")
+            if not record.enrollment_number.isdigit():
+                raise ValidationError("Número de Matrícula solo puede contener números")
+            if len(record.enrollment_number) < 10:
+                raise ValidationError("Número de Matrícula no puede contener menos de 10 números")
     
             
     
