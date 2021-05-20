@@ -17,8 +17,6 @@ class OpStudent(models.Model):
     @api.constrains('enrollment_number')
     def check_number_digits(self):
         for record in self:
-            if not record.enrollment_number.isdigit():
-                raise ValidationError("Número de Matrícula solo puede contener números")
             if len(record.enrollment_number) < 10:
                 raise ValidationError("Número de Matrícula no puede contener menos de 10 números")
     
