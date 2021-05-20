@@ -48,7 +48,6 @@ class OpStudent(models.Model):
 
         return {
             'mame': "Documentos del Estudiante: " + self.name,
-            'view_type': 'form',
             'view_mode': 'kanban,tree,form',
             'res_model': 'muk_dms.directory',
             'domain': [("storage", "=", self.storage.id), ("is_hidden", "=", False), ],
