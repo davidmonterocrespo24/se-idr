@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_op_student_form_idr_inherit" model="ir.ui.view">
+            <field name="name">op.student.form.fees.inherit</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_fees.view_op_student_form_fees_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='fees_collection_details']" position="replace">
+                    <page name="fees_collection_details" string="Fees Collection Details">
+                        <field name="fees_detail_ids">
+                            <tree string="Fees Collection Details" editable="top">
+                                <field name="fees_line_id" invisible="1"/>
+                                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="currency_id" invisible="1"/>
+                                <field name="discount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="after_discount_amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="amount" widget="monetary" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="fees_factor" invisible="1"/>
+                                <field name="product_id" invisible="1"/>
+                                <field name="invoice_id" invisible="1"/>
+                                <field name="state" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="invoice_state" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <button string="Create Invoice"
+                                        states="draft" type="object" name="get_invoice"
+                                        groups="openeducat_core.group_op_back_office"/>
+                                <button string="View Invoice"
+                                        groups="openeducat_core.group_op_back_office"
+                                        states="invoice" type="object"
+                                        name="action_get_invoice"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
