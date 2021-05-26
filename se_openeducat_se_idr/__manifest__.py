@@ -21,6 +21,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/op_student.xml',
-        'views/student_view.xml',
+        #'views/student_view.xml',
     ],
 }
