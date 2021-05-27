@@ -20,6 +20,6 @@
         'security/ir.model.access.csv',
         'views/op_student.xml',
         'views/student_view.xml',
-        'views/account_payment_view'
+        'views/account_payment_view.xml'
     ],
 }
