@@ -21,7 +21,7 @@
                                 <form action="/document/add" method="post" enctype="multipart/form-data" >
                                     <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                                     <div class="form-group">
-                                        <input name="upload" type="file" value="Choose document" multiple="multiple" accept="image/*"/> 
+                                        <input name="upload" type="file" value="Choose document" multiple="multiple" /> 
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" value="Upload" class="btn btn-primary" />
