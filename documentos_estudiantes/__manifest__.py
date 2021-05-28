@@ -12,6 +12,7 @@
     "depends" : ['base','openeducat_core','muk_dms'],
     "data": [
             'views/documento_estudiante.xml',
+            'views/upload_doc.xml'
             ],
     "auto_install": False,
     "price": 5,

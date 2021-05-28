@@ -13,7 +13,10 @@
 
                     </button>
                 </xpath>
-
+                <xpath expr="//form/header/button[@name='create_student_user']" position="after">
+                    <button name="action_send" string="Solicitar Documento" type="object"
+                        class="btn-primary" attrs="{'invisible': [('user_id', '=', False)]}"/>
+                </xpath>
             </field>
         </record>
 
@@ -30,6 +33,38 @@
                     <field name="partner_relacionado_id"/>
                 </xpath>
 
+            </field>
+        </record>
+
+        <record id="email_document_template" model="mail.template">
+            <field name="name">Solicitar Documento</field>
+            <field name="email_from">${(object.user_id.email and '%s &lt;%s&gt;' % (object.user_id.name, object.user_id.email) or '')|safe}</field>
+            <field name="subject">Solicitud de Documento</field>
+            <field name="partner_to"></field>
+            <field name="model_id" ref="documentos_estudiantes.model_op_student"/>
+            <field name="auto_delete" eval="True"/>
+            <!--field name="report_template" ref="project_task_report.report_project_task_action"/-->
+            <field name="report_name">Documento</field>
+            <field name="lang">${object.user_id.lang}</field>
+            <field name="body_html"><![CDATA[
+                <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+                    <p>Atención: ${object.partner_id.name or ''},</p>
+                    <br/>
+                    <br/>
+                    <p >Por medio del presente le solicitamos el siguiente documento:  </p>
+                    <br/>
+                    <div style="margin: 16px 0px 16px 0px;">
+                        <a href="${ctx['base_url']}"
+                            style="background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;">
+                            Enviar Documento
+                        </a>
+                    </div>
+                    <br/>
+                    <p >Favor de enviar a la brevedad posible el documento(s) solicitado(s) </p>
+                    <p >Atentamente </p>
+                    <p >${object.company_id.name} </p>
+                    <br/>
+                </div>]]>
             </field>
         </record>
     </data>
