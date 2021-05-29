@@ -80,7 +80,7 @@ class OpStudent(models.Model):
             compose_form_id = False
 
         partner_ids = []
-        partner_ids.append(self.user_id.id)
+        partner_ids.append(self.partner_id.id)
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         base_url += '/document/add'
         ctx = {
