@@ -1,0 +1,107 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* documentos_estudiantes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-28 21:02+0000\n"
+"PO-Revision-Date: 2021-05-28 21:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: documentos_estudiantes
+#: model:mail.template,body_html:documentos_estudiantes.email_document_template
+msgid ""
+"\n"
+"                <div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"                    <p>Atención: ${object.partner_id.name or ''},</p>\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <p >Por medio del presente le solicitamos el siguiente documento:  </p>\n"
+"                    <br/>\n"
+"                    <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                        <a href=\"${ctx['base_url']}\"\n"
+"                            style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                            Enviar Documento\n"
+"                        </a>\n"
+"                    </div>\n"
+"                    <br/>\n"
+"                    <p >Favor de enviar a la brevedad posible el documento(s) solicitado(s) </p>\n"
+"                    <p >Atentamente </p>\n"
+"                    <p >${object.company_id.name} </p>\n"
+"                    <br/>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_web_page
+msgid "&amp;times;"
+msgstr "&amp;tiempos;"
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_web_page
+msgid "<i class=\"fa fa-cloud-upload\"/> Upload an Attachment..."
+msgstr "<i class=\"fa fa-cloud-upload\"/> Subir un documento..."
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_web_page
+msgid "Attachment(s)"
+msgstr "Documentos"
+
+#. module: documentos_estudiantes
+#: model:ir.model,name:documentos_estudiantes.model_muk_dms_directory
+msgid "Directory"
+msgstr "Directorio"
+
+#. module: documentos_estudiantes
+#: model:mail.template,report_name:documentos_estudiantes.email_document_template
+msgid "Documento"
+msgstr "Documento"
+
+#. module: documentos_estudiantes
+#: model:ir.model.fields,field_description:documentos_estudiantes.field_op_student__storage
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.documentos_estudiantes_form_view
+msgid "Documentos"
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_ok_page
+msgid "El archivo se envió correctamente!!"
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model:ir.model.fields,field_description:documentos_estudiantes.field_muk_dms_directory__partner_relacionado_id
+msgid "Estudiante Relacionado"
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.documentos_estudiantes_form_view
+msgid "Solicitar Documento"
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model:mail.template,subject:documentos_estudiantes.email_document_template
+msgid "Solicitud de Documento"
+msgstr ""
+
+#. module: documentos_estudiantes
+#: model:ir.model,name:documentos_estudiantes.model_op_student
+msgid "Student"
+msgstr "Estudiante"
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_web_page
+msgid "Upload Attachment"
+msgstr "Subir archivo"
+
+#. module: documentos_estudiantes
+#: model_terms:ir.ui.view,arch_db:documentos_estudiantes.upload_doc_web_page
+msgid "Upload an Attachment"
+msgstr "Subir archivo"

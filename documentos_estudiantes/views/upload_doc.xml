@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="upload_doc_web_page" name="Upload Document">
+        <t t-call="website.layout">
+            <div class="container">
+                <div>
+                    <h4 class="modal-title">Attachment(s)</h4>
+                </div>
+                <a class="btn btn-primary oe_upload_attachement" title="Upload Attachment" href="#" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-cloud-upload"></i> Upload an Attachment...
+                </a>
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" style="max-width: 50%;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><![CDATA[&times;]]></button>
+                                <h4 class="modal-title">Upload an Attachment</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/document/add" method="post" enctype="multipart/form-data" >
+                                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                    <div class="form-group">
+                                        <input name="upload" type="file" value="Choose document" multiple="multiple" /> 
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="Upload" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <template id="upload_doc_ok_page" name="Upload ok">
+        <t t-call="website.layout">
+            <div class="container">
+                <div>
+                    <h4 class="modal-title">El archivo se envió correctamente!!</h4>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

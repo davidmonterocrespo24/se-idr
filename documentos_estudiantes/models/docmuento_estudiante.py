@@ -67,7 +67,44 @@ class OpStudent(models.Model):
             record.storage.unlink()
         return super(OpStudent, self).unlink()
 
+    def action_send(self):
+        self.ensure_one()
+        ir_model_data = self.env['ir.model.data']
+        try:
+            template_id = ir_model_data.get_object_reference('documentos_estudiantes', 'email_document_template')[1]
+        except ValueError:
+            template_id = False
+        try:
+            compose_form_id = ir_model_data.get_object_reference('mail', 'email_compose_message_wizard_form')[1]
+        except ValueError:
+            compose_form_id = False
 
+        partner_ids = []
+        partner_ids.append(self.user_id.id)
+        base_url = self.env['ir.config_parameter'].get_param('web.base.url')
+        base_url += '/document/add'
+        ctx = {
+            'default_model': 'op.student',
+            'default_res_id': self.ids[0],
+            'default_use_template': bool(template_id),
+            'default_partner_ids': partner_ids,
+            'default_template_id': template_id,
+            'default_composition_mode': 'comment',
+            'base_url':base_url,
+            #'custom_layout': "mail.mail_notification_paynow",
+            #'proforma': self.env.context.get('proforma', False),
+            'force_email': False
+        }
+        return {
+            'type': 'ir.actions.act_window',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'mail.compose.message',
+            'views': [(compose_form_id, 'form')],
+            'view_id': compose_form_id,
+            'target': 'new',
+            'context': ctx,
+        }
 class Directory(models.Model):
     _inherit = 'muk_dms.directory'
 
