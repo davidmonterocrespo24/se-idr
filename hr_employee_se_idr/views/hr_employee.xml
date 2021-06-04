@@ -1,0 +1,13 @@
+<odoo>
+      <record id="hr_view_employee_form_inherit" model="ir.ui.view">
+            <field name="name">hr.view.employee.inherit.view.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='km_home_work']" position="after">
+                    <field name="rfc"/>
+                    <field name="curp"/>
+                </xpath>
+            </field>
+        </record>
+</odoo>

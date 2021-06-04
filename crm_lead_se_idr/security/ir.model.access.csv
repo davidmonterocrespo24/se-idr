@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_crm_lead,crm_lead_default,model_crm_lead,base.group_user,1,1,1,1
+acl_crm_catalog,crm_catalog_default,model_crm_catalog,base.group_user,1,1,1,1
