@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="crm_catalog_talleres" model="crm.catalog">
+            <field name="name">Talleres</field>
+        </record>
+            <record id="catalog_talleres_robotica69" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_talleres"/>
+                <field name="name">Talleres robótica (6 a 9 años).</field>
+            </record>
+            <record id="catalog_talleres_robotica1012" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_talleres"/>
+                <field name="name">Talleres robótica (10 a 12 años).</field>
+            </record>
+            <record id="catalog_talleres_robotica1315" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_talleres"/>
+                <field name="name">Talleres robótica (13 a 15 años).</field>
+            </record>  
+            <record id="catalog_talleres_robotica1618" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_talleres"/>
+                <field name="name">Talleres robótica (16 a 18 años).</field>
+            </record>
+            
+        <record id="crm_catalog_bachillerato" model="crm.catalog">
+            <field name="name">Bachillerato</field>
+        </record>
+            <record id="catalog_bachillerato8" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_bachillerato"/>
+                <field name="name">Bachillerato en 8 meses.</field>
+            </record>
+
+        <record id="crm_catalog_licenciaturas" model="crm.catalog">
+            <field name="name">Licenciaturas</field>
+        </record>
+            <record id="catalog_licenciaturas_adm" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_licenciaturas"/>
+                <field name="name">Lic. Administración en Empresas.</field>
+            </record>
+            <record id="catalog_licenciaturas_psico" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_licenciaturas"/>
+                <field name="name"> Lic. Psicología Organizacional.</field>
+            </record>
+            <record id="catalog_licenciaturas_derecho" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_licenciaturas"/>
+                <field name="name">Lic. Derecho.</field>
+            </record>  
+            <record id="catalog_licenciaturas_merca" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_licenciaturas"/>
+                <field name="name"> Lic. Mercadotecnia.</field>
+            </record>
+            <record id="catalog_licenciaturas_pedag" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_licenciaturas"/>
+                <field name="name">Lic. Pedagogía.</field>
+            </record>
+
+        <record id="crm_catalog_ingenierias" model="crm.catalog">
+            <field name="name">Ingenierías</field>
+        </record>
+            <record id="catalog_ingenieria_mecatronica" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_ingenierias"/>
+                <field name="name"> Ing. Mecatrónica y Robótica.</field>
+            </record>
+            <record id="catalog_ingenieria_app_mov" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_ingenierias"/>
+                <field name="name"> Ing. Aplicaciones Móviles Digitales.</field>
+            </record>
+
+        <record id="crm_catalog_maestrias" model="crm.catalog">
+            <field name="name">Maestrías</field>
+        </record>
+            <record id="catalog_maestrias_adm" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_maestrias"/>
+                <field name="name"> Master Adm. De Empresas.</field>
+            </record>
+            <record id="catalog_maestrias_edit" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_maestrias"/>
+                <field name="name">Master en Editorial Avanzado.</field>
+            </record>
+            <record id="catalog_maestrias_derecho_procesal" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_maestrias"/>
+                <field name="name">Master Derecho Procesal Penal</field>
+            </record>  
+            <record id="catalog_maestrias_admin_pub" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_maestrias"/>
+                <field name="name">Master Administración Pública</field>
+            </record>
+            <record id="catalog_maestrias_educac" model="crm.catalog">
+                <field name="parent_id" ref="crm_catalog_maestrias"/>
+                <field name="name">Master en Educación.</field>
+            </record>
+    </data>
+</odoo>
