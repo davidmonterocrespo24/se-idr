@@ -79,20 +79,15 @@ class OpStudent(models.Model):
         except ValueError:
             compose_form_id = False
 
-        partner_ids = []
-        partner_ids.append(self.partner_id.id)
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
         base_url += '/document/add'
         ctx = {
             'default_model': 'op.student',
             'default_res_id': self.ids[0],
             'default_use_template': bool(template_id),
-            'default_partner_ids': partner_ids,
             'default_template_id': template_id,
             'default_composition_mode': 'comment',
             'base_url':base_url,
-            #'custom_layout': "mail.mail_notification_paynow",
-            #'proforma': self.env.context.get('proforma', False),
             'force_email': False
         }
         return {
