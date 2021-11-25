@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="op_student_form_inherit" model="ir.ui.view">
+            <field name="name">Estudiantes</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="vigencia_credencial"/>
+                    <field name="centro_trabajo"/>
+                </xpath>
+<!--                <xpath expr="//field[@name='example_field']" position="attributes">-->
+<!--                    <attribute name="invisible">True</attribute>-->
+<!--                </xpath>-->
+            </field>
+        </record>
+
+    </data>
+</odoo>

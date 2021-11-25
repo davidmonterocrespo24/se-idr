@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="card_employee_report_ok"
+                model="op.student"
+                report_type="qweb-html"
+                string="CREDENCIAL FRONTAL"
+                name="openeducat_credenciales.report_card_template_tableok"
+                file="openeducat_credenciales.report_card_template_tableok"
+            />
+
+        <template id="report_card_template_tableok">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div class="table-responsive" >
+                                <h1>Cara frontal</h1>
+<!--                                <table style="border-spacing:45;height:600px;width:400px;border: 1px solid black;" class="table">-->
+                                <table align="center" width="256" height="241" border="1"  style="font-family: Open Sans;  border: 1px solid black;">
+  <tbody>
+    <tr>
+      <td><table width="256" border="0" valing="top" style="background-image:url('/employee_card/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
+        <tbody>
+          <tr>
+            <td height="50"><center><img t-attf-src="/employee_card/static/src/img/logoblancoe.png" style="width:90px; height: 50px"/>
+            </center></td>
+          </tr>
+          <tr>
+              <td style="color: #fff; font-size: 7px"><center><img t-attf-src="/employee_card/static/src/img/titlea.png" /></center></td>
+          </tr>
+          <tr>
+            <td height="80"><center><img t-attf-src="data:image/*;base64,{{o.image_1920}}" style="width:120px; height: 138px; border: 5px solid white;" /></center></td>
+          </tr>
+          <tr>
+            <td><div style="color:white;padding: 5px 0px 5px 0px" class="text-center">
+                                                      <span class="badge badge-pill" style="font-size:16px; background-color:#35455E; width:165px; padding-top: 9px; padding-bottom: 9px">ALUMNO</span>
+                                                  </div><h1 style="font-size:14px; color:#fff"><center><strong><span t-field="o.category_id.code"/></strong></center></h1></td>
+          </tr>
+          <tr>
+            <td><table width="100%" border="0">
+              <tbody>
+                <tr>
+                  <td valign="top" width="80%" style="font-size:10px; vertical-align:top;"><div style="padding: 0px 5px 0px 5px"><strong>Nombre Completo: </strong><br /><span t-field="o.name"/><br />
+                                                            <strong>Carrera: </strong><br /><span t-field="o.category_id"/><br />
+                                                            <strong>Matricula: </strong><br /><span t-field="o.rfc"/><br />
+                                                            <strong>CURP: </strong><br /><span t-field="o.curp"/></div></td>
+                  <td width="20%"><center><img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"  align="absmiddle" style="margin-top:5px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/></center></td>
+                </tr>
+              </tbody>
+            </table></td>
+          </tr>
+        </tbody>
+      </table></td>
+    </tr>
+      <tr>
+          <td height="20" style="background-image:url('/employee_card/static/src/img/banner.png');background-position: center;background-size: cover;"></td></tr>
+  </tbody>
+</table>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </template>
+
+    </data>
+</odoo>

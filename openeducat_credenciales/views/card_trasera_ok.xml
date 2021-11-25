@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+                id="card_employee_reportokk"
+                model="op.student"
+                report_type="qweb-html"
+                string="CREDENCIAL TRASERA"
+                name="openeducat_credenciales.report_card_template_tableokk"
+                file="openeducat_credenciales.report_card_template_tableokk"
+            />
+
+       <template id="report_card_template_tableokk">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div class="table-responsive">
+                                <h1>Cara trasera</h1>
+                               <table width="256" height="241" border="1" align="center" cellpadding="0" cellspacing="0" style="font-family: Open Sans;  border: 1px solid black;">
+  <tr>
+    <td><table width="256" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="80" style="background-image:url('/employee_card/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/employee_card/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
+        <td ><table  border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="center"><img t-attf-src="/employee_card/static/src/img/logocolor.png" style="width:100px; height:70px"/></div></td>
+          </tr>
+          <tr>
+            <td><div style="font-size:10px; padding-left: 9px; padding-right: 9px">
+                                                            <strong>Nombre Completo: </strong><br /><span t-field="o.name"/>
+                                                            <br/>
+                                                            <br/>
+                                                            <strong>Firma del estudiante: </strong>
+                                                            <br/>
+                                                            <strong>_____________________ </strong>
+                                                            <br/>
+                                                            <span t-field="o.category_id"/>
+                                                            <br/>
+                                                            <br/>
+                                                            <strong>Clave Carrera: </strong><span t-field="o.category_id.clave_carrera"/><br />
+                                                            <strong>CCT: </strong><span t-field="o.centro_trabajo"/><br />
+                                                            <strong>Vigencia credencial: </strong><span t-field="o.vigencia_credencial"/>
+                                                            <br/><br/>
+                                                                <p style="font-style: italic;font-size:8px;text-align:justify">
+                                                                "Esta credencial es personal e intransferible y de exclusiva responsabilidad del estudiante. Cualquier asunto sobre el mismo pueden enviarnos un correo a: s.escolares@idr.edu.mx o llamar al número: 55 27 57 59 75."
+                                                                </p>
+                                                        </div></td>
+          </tr>
+          <tr>
+            <td>
+                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"  align="absmiddle" style="margin-top:-10px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
+            </td>
+              <tr>
+                <td>
+                    <strong></strong><span align="absmiddle" style="vertical-align:middle;padding: 0px 5px 0px 5px; float:right;font-size:8px;">https://uidr.mx/</span><br />
+                </td>
+              </tr>
+          </tr>
+
+        </table>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </template>
+
+    </data>
+</odoo>
