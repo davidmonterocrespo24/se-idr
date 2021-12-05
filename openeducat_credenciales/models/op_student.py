@@ -19,6 +19,8 @@ class EstudiantesInherit(models.Model):
     @api.depends('registration_date')
     def compute_vigencia(self):
         # pass
-        self.vigencia_credencial = self.registration_date.year + 2
+
+        for model in self:
+            model.vigencia_credencial = model.registration_date.year + 2
         # raise ValidationError(self.vigencia_credencial)
 
