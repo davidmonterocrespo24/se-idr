@@ -12,9 +12,6 @@
                     <field name="vigencia_credencial"/>
                     <field name="centro_trabajo"/>
                 </xpath>
-<!--                <xpath expr="//field[@name='example_field']" position="attributes">-->
-<!--                    <attribute name="invisible">True</attribute>-->
-<!--                </xpath>-->
             </field>
         </record>
 

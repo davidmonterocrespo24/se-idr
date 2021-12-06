@@ -12,9 +12,6 @@
                     <field name="clave_carrera"/>
                     <field name="imagen_qr" widget="image" class="oe_left oe_avatar"/>
                 </xpath>
-<!--                <xpath expr="//field[@name='example_field']" position="attributes">-->
-<!--                    <attribute name="invisible">True</attribute>-->
-<!--                </xpath>-->
             </field>
         </record>
     </data>

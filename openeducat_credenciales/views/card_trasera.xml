@@ -3,15 +3,15 @@
     <data>
 
         <report
-                id="card_employee_reportokk"
+                id="credencial_trasera_report"
                 model="op.student"
-                report_type="qweb-html"
+                report_type="qweb-pdf"
                 string="CREDENCIAL TRASERA"
-                name="openeducat_credenciales.report_card_template_tableokk"
-                file="openeducat_credenciales.report_card_template_tableokk"
+                name="openeducat_credenciales.report_credencial_template_trasera"
+                file="openeducat_credenciales.report_credencial_template_trasera"
             />
 
-       <template id="report_card_template_tableokk">
+       <template id="report_credencial_template_trasera">
                 <t t-call="web.basic_layout">
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
@@ -21,10 +21,10 @@
   <tr>
     <td><table width="256" border="0" cellpadding="0" cellspacing="0">
       <tr>
-        <td width="80" style="background-image:url('/employee_card/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/employee_card/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
+        <td width="80" style="background-image:url('/openeducat_credenciales/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/openeducat_credenciales/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
         <td ><table  border="0" cellpadding="0" cellspacing="0">
           <tr>
-            <td><div align="center"><img t-attf-src="/employee_card/static/src/img/logocolor.png" style="width:100px; height:70px"/></div></td>
+            <td><div align="center"><img t-attf-src="/openeducat_credenciales/static/src/img/logocolor.png" style="width:100px; height:70px"/></div></td>
           </tr>
           <tr>
             <td><div style="font-size:10px; padding-left: 9px; padding-right: 9px">

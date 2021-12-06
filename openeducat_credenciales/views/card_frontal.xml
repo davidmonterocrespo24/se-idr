@@ -3,32 +3,31 @@
     <data>
 
         <report
-                id="card_employee_report_ok"
+                id="credencial_frontal_report"
                 model="op.student"
-                report_type="qweb-html"
+                report_type="qweb-pdf"
                 string="CREDENCIAL FRONTAL"
-                name="openeducat_credenciales.report_card_template_tableok"
-                file="openeducat_credenciales.report_card_template_tableok"
+                name="openeducat_credenciales.report_credencial_template_frontal"
+                file="openeducat_credenciales.report_credencial_template_frontal"
             />
 
-        <template id="report_card_template_tableok">
+        <template id="report_credencial_template_frontal">
                 <t t-call="web.basic_layout">
                     <t t-foreach="docs" t-as="o">
                         <div class="page">
                             <div class="table-responsive" >
                                 <h1>Cara frontal</h1>
-<!--                                <table style="border-spacing:45;height:600px;width:400px;border: 1px solid black;" class="table">-->
                                 <table align="center" width="256" height="241" border="1"  style="font-family: Open Sans;  border: 1px solid black;">
   <tbody>
     <tr>
-      <td><table width="256" border="0" valing="top" style="background-image:url('/employee_card/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
+      <td><table width="256" border="0" valing="top" style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
         <tbody>
           <tr>
-            <td height="50"><center><img t-attf-src="/employee_card/static/src/img/logoblancoe.png" style="width:90px; height: 50px"/>
+            <td height="50"><center><img t-attf-src="/openeducat_credenciales/static/src/img/logoblancoe.png" style="width:90px; height: 50px"/>
             </center></td>
           </tr>
           <tr>
-              <td style="color: #fff; font-size: 7px"><center><img t-attf-src="/employee_card/static/src/img/titlea.png" /></center></td>
+              <td style="color: #fff; font-size: 7px"><center><img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png" /></center></td>
           </tr>
           <tr>
             <td height="80"><center><img t-attf-src="data:image/*;base64,{{o.image_1920}}" style="width:120px; height: 138px; border: 5px solid white;" /></center></td>
@@ -55,7 +54,7 @@
       </table></td>
     </tr>
       <tr>
-          <td height="20" style="background-image:url('/employee_card/static/src/img/banner.png');background-position: center;background-size: cover;"></td></tr>
+          <td height="20" style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"></td></tr>
   </tbody>
 </table>
                             </div>
