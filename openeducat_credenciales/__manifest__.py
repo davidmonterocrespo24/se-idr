@@ -19,8 +19,7 @@
 
     # always loaded
     'data': [
-        'views/card_frontal.xml',
-        'views/card_trasera.xml',
+        'views/card_student.xml',
         'views/op_category_inherit.xml',
         'views/op_student_inherit.xml',
     ],
