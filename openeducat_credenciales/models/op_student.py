@@ -14,7 +14,7 @@ class EstudiantesInherit(models.Model):
     _inherit = 'op.student'
 
     vigencia_credencial = fields.Char(string='Vigencia Credencial', required=False,compute='compute_vigencia', store=True)
-    centro_trabajo = fields.Char(string='Centro de Trabajo', required=False)
+    centro_trabajo = fields.Char(string='CCT', required=False)
 
     @api.depends('registration_date')
     def compute_vigencia(self):

@@ -84,7 +84,7 @@
                                                                                 <br/>
                                                                                 <strong>Matricula:</strong>
                                                                                 <br/>
-                                                                                <span t-field="o.rfc"/>
+                                                                                <span t-field="o.enrollment_number"/>
                                                                                 <br/>
                                                                                 <strong>CURP:</strong>
                                                                                 <br/>
