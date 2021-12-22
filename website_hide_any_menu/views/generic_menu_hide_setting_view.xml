@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="record_website_hide_menu_page_setting" model="website.hide.menu.page.setting">
+            <field name="name">Generic Website Hide Menu And Page Settings</field>
+        </record>
+
+        <record id="website_hide_menu_page_setting_form" model="ir.ui.view">
+            <field name="name">website.hide.menu.page.setting.form</field>
+            <field name="model">website.hide.menu.page.setting</field>
+            <field name="arch" type="xml">
+                <form string="Generic Website Hide Menu And Page Settings" create="false" delete="false">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <notebook>
+                            <page string="Internal User Configuration">
+                                <group string="Hide Website Menu">
+                                    <field name="internal_menu_hide" nolabel="1"/>
+                                </group>
+                                <group string="Hide Website Page">
+                                    <field name="internal_page_hide" nolabel="1"/>
+                                </group>
+                            </page>
+                            <page string="Portal User Configuration">
+                                <group string="Hide Website Menu">
+                                    <field name="portal_menu_hide" nolabel="1"/>
+                                </group>
+                                <group string="Hide Website Page">
+                                    <field name="portal_page_hide" nolabel="1"/>
+                                </group>
+                            </page>
+                            <page string="Public User Configuration">
+                                <group string="Hide Website Menu">
+                                    <field name="public_menu_hide" nolabel="1"/>
+                                </group>
+                                <group string="Hide Website Page">
+                                    <field name="public_page_hide" nolabel="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_website_hide_menu_page_setting" model="ir.actions.act_window">
+            <field name="name">Generic Hide Menu Page Setting</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">website.hide.menu.page.setting</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Generic Menu Hide Setting" id="menu_generic_menu_hide_setting" action="action_website_hide_menu_page_setting"
+                  parent="website.menu_website_global_configuration" sequence="46" groups="website.group_website_designer"/>
+
+    </data>
+</odoo>

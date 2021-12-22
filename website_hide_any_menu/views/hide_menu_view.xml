@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_users_hide_website_menu_form" model="ir.ui.view">
+            <field name="name">res.users.hide.website.menu.form</field>
+            <field name="model">res.users</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Hide Specific Website Menu">
+                        <group colspan="4">
+                            <field name="website_menu_ids" nolabel="1"/>
+                        </group>
+                    </page>
+                    <page string="Hide Specific Website Page">
+                        <group colspan="4">
+                            <field name="website_page_ids" nolabel="1"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record id="view_groups_hide_website_menu_form" model="ir.ui.view">
+            <field name="name">res.groups.hide.website.menu.form</field>
+            <field name="model">res.groups</field>
+            <field name="inherit_id" ref="base.view_groups_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Website Menu To Hide">
+                        <field name="hide_menu_ids"/>
+                    </page>
+                    <page string="Website Page To Hide">
+                        <field name="hide_page_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Override original tree view and remove editable bottom option -->
+        <record id="website.menu_tree" model="ir.ui.view">
+            <field name="name">website.menu.tree</field>
+            <field name="model">website.menu</field>
+            <field name="field_parent">child_id</field>
+            <field name="arch" type="xml">
+                <tree string="Website menu">
+                    <field name="sequence" widget="handle"/>
+                    <field name="website_id" options="{'no_create': True}" groups="website.group_multi_website"/>
+                    <field name="name"/>
+                    <field name="url"/>
+                    <field name="new_window"/>
+                    <field name="parent_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="website_menus_hide_form_view" model="ir.ui.view">
+            <field name="name">website.hide.menu.form</field>
+            <field name="model">website.menu</field>
+            <field name="inherit_id" ref="website.website_menus_form_view"/>
+            <field name="arch" type="xml">
+                <label for="child_id" position="replace"/>
+                <field name="child_id" position="replace">
+                    <notebook>
+                        <page string="Child Menus" name="child_menus">
+                            <field name="child_id">
+                                <tree>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"/>
+                                    <field name="url"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Hide From Users" name="hide_from_user">
+                            <field name="hide_user_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="login"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Hide From Groups" name="hide_from_group">
+                            <field name="hide_group_ids"/>
+                        </page>
+                    </notebook>
+                </field>
+            </field>
+        </record>
+
+        <record id="website_pages_hide_form_view" model="ir.ui.view">
+            <field name="name">website.page.hide.form</field>
+            <field name="model">website.page</field>
+            <field name="inherit_id" ref="website.website_pages_form_view"/>
+            <field name="arch" type="xml">
+                <label for="menu_ids" position="replace"/>
+                <field name="menu_ids" position="replace">
+                    <notebook>
+                        <page string="Related Menu Items" name="related_menu_items">
+                            <field name="menu_ids"/>
+                        </page>
+                        <page string="Hide From Users" name="hide_from_user">
+                            <field name="hide_user_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="login"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Hide From Groups" name="hide_from_group">
+                            <field name="hide_group_ids"/>
+                        </page>
+                    </notebook>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>
