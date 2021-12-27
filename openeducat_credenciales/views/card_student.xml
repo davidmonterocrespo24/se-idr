@@ -26,7 +26,7 @@
                                                    style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
                                                 <tbody>
                                                     <tr>
-                                                        <td height="50">
+                                                        <td style="height:60px">
                                                             <center>
                                                                 <img t-attf-src="/openeducat_credenciales/static/src/img/logoblancoe.png"
                                                                      style="width:90px; height: 50px"/>
@@ -34,17 +34,19 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="color: #fff; font-size: 7px">
+                                                        <td style="color: #fff; font-size: 6px" >
                                                             <center>
-                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png"/>
+                                                                <strong>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA<br /><br /></strong>
+<!--                                                                <p>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA</p>-->
+<!--                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png"/>-->
                                                             </center>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td height="80">
+                                                        <td>
                                                             <center>
                                                                 <img t-attf-src="data:image/*;base64,{{o.image_1920}}"
-                                                                     style="width:120px; height: 138px; border: 5px solid white;"/>
+                                                                     style="width:120px; height: 165px; border: 5px solid white;"/>
                                                             </center>
                                                         </td>
                                                     </tr>
