@@ -23,7 +23,6 @@
           <p><strong>Email Institucional: </strong><span t-field="user_id.user_line.institutional_email"/> </p>
           <p><strong>Vigencia Credencial: </strong><span t-field="user_id.user_line.vigencia_credencial"/> </p>
           <p><strong>CURP: </strong><span t-field="user_id.user_line.curp"/> </p>
-
       </xpath>
   </template>
 </odoo>
