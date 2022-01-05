@@ -13,7 +13,11 @@
 
 <!--      <div t-field="user_id.partner_id"/>-->
       <div t-field="user_id.gender"/>
-      <div t-field="user_id.partner_id.birth_date"/>
+      <div t-field="user_id.student_line.visa_info"/>
+      <div t-field="user_id.student_line.birth_date"/>
+<!--      <div t-field="user_id.student_line.blood_group"/>-->
+      <h1>holasasd</h1>
+<!--      <div t-field="user_id.partner_id.birth_date"/>-->
 <!--      <div t-field="user_id.visa_info"/>-->
 <!--      <div t-field="user_id.blood_group"/>-->
 <!--      <div t-field="user_id.emergency_contact"/>-->
