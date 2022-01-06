@@ -1,23 +1,12 @@
 <?xml version="1.0"?>
 <odoo>
-<!--    <data>-->
-
-<!--        <report-->
-<!--                id="credencial_report_website"-->
-<!--                model="op.student"-->
-<!--                report_type="qweb-pdf"-->
-<!--                string="Credenciales website"-->
-<!--                name="openeducat_evaluacion.report_credencial_template_website"-->
-<!--                file="openeducat_evaluacion.report_credencial_template_website"-->
-<!--        />-->
-
         <template id="report_credencial_template_website">
 <!--        <t t-name="openeducat_evaluacion.report_credencial_template_website">-->
              <t t-call="portal.portal_layout">
                 <t t-foreach="docs" t-as="o">
-                    <div class="page">
+                    <div class="row">
 
-                        <div class="table-responsive">
+                        <div class="col-sm-4">
                             <table align="left" width="256" height="241" border="1" style="font-family: Open Sans;  border: 1px solid black;">
                                 <tbody>
                                     <tr>
@@ -44,7 +33,7 @@
                                                         <td>
                                                             <center>
 
-                                                             <img class="rounded-circle mr4 float-left o_portal_contact_img" t-att-src="image_data_uri(o.image_1920)"  style="width:120px; height: 165px; border: 5px solid white;"/>
+                                                             <img t-att-src="image_data_uri(o.image_1920)" style="width:120px; height: 145px; border: 5px solid white;"/>
                                                             </center>
                                                         </td>
                                                     </tr>
@@ -103,14 +92,14 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height="20" style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"/>
+                                        <td height="10" style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"/>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <br/>
+                        <div class="col-sm-0"></div>
 
-                        <div class="table-responsive">
+                        <div class="col-sm-4">
 
                             <table width="256" height="241" border="1" align="left" cellpadding="0" cellspacing="0" style="font-family: Open Sans;  border: 1px solid black;">
                                 <tr>
