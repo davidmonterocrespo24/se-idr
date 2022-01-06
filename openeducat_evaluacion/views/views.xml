@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-<!--  <template id="portal_home_inherit" inherit_id="portal.portal_my_home" name="Portal Home Inherit">-->
-<!--    <xpath expr="//h3" position="after">-->
 
-<!--      <h1>hola mundo</h1>-->
-
-<!--    </xpath>-->
-<!--  </template>-->
 
   <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
     <xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
