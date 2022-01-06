@@ -15,7 +15,7 @@ class CustomerPortal(CustomerPortal):
     def credencial(self, **kw):
         values={}
         values.update({
-            'docs': request.user_id.user_line,
+            'docs': request.env.user.user_line,
         })
 
         return request.render("openeducat_credenciales.report_credencial_template", values)
