@@ -13,9 +13,9 @@ class CustomerPortal(CustomerPortal):
 
     @http.route(['/credencial'], type='http', auth="user", website=True)
     def credencial(self, **kw):
-        values={}
+        values = {}
         values.update({
             'docs': request.env.user.user_line,
         })
 
-        return request.render("openeducat_credenciales.report_credencial_template", values)
+        return request.render("openeducat_evaluacion.report_credencial_template_website", values)

@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<odoo>
+<!--    <data>-->
+
+<!--        <report-->
+<!--                id="credencial_report_website"-->
+<!--                model="op.student"-->
+<!--                report_type="qweb-pdf"-->
+<!--                string="Credenciales website"-->
+<!--                name="openeducat_evaluacion.report_credencial_template_website"-->
+<!--                file="openeducat_evaluacion.report_credencial_template_website"-->
+<!--        />-->
+
+        <template id="report_credencial_template_website">
+<!--        <t t-name="openeducat_evaluacion.report_credencial_template_website">-->
+             <t t-call="portal.portal_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+
+                        <div class="table-responsive">
+                            <table align="left" width="256" height="241" border="1" style="font-family: Open Sans;  border: 1px solid black;">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <table width="256" border="0" valing="top" style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="height:60px">
+                                                            <center>
+                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/logoblancoe.png" style="width:90px; height: 50px"/>
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="color: #fff; font-size: 6px">
+                                                            <center>
+                                                                <strong>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA<br/><br/></strong>
+<!--                                                                <p>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA</p>-->
+<!--                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png"/>-->
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <center>
+
+                                                             <img class="rounded-circle mr4 float-left o_portal_contact_img" t-att-src="image_data_uri(o.image_1920)"  style="width:120px; height: 165px; border: 5px solid white;"/>
+                                                            </center>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <div style="color:white;padding: 5px 0px 5px 0px" class="text-center">
+                                                                <span class="badge badge-pill" style="font-size:16px; background-color:#35455E; width:165px; padding-top: 9px; padding-bottom: 9px">
+                                                                    ALUMNO
+                                                                </span>
+                                                            </div>
+                                                            <h1 style="font-size:14px; color:#fff">
+                                                                <center>
+                                                                    <strong>
+                                                                        <span t-field="o.category_id.code"/>
+                                                                    </strong>
+                                                                </center>
+                                                            </h1>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <table width="100%" border="0">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top" width="80%" style="font-size:10px; vertical-align:top;">
+                                                                            <div style="padding: 0px 5px 0px 5px">
+                                                                                <strong>Nombre Completo:</strong>
+                                                                                <br/>
+                                                                                <span t-field="o.name"/>
+                                                                                <br/>
+                                                                                <strong>Carrera:</strong>
+                                                                                <br/>
+                                                                                <span t-field="o.category_id"/>
+                                                                                <br/>
+                                                                                <strong>Matricula:</strong>
+                                                                                <br/>
+                                                                                <span t-field="o.enrollment_number"/>
+                                                                                <br/>
+                                                                                <strong>CURP:</strong>
+                                                                                <br/>
+                                                                                <span t-field="o.curp"/>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td width="20%">
+                                                                            <center>
+                                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}" align="absmiddle" style="margin-top:5px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/>
+                                                                            </center>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="20" style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"/>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br/>
+
+                        <div class="table-responsive">
+
+                            <table width="256" height="241" border="1" align="left" cellpadding="0" cellspacing="0" style="font-family: Open Sans;  border: 1px solid black;">
+                                <tr>
+                                    <td>
+                                        <table width="256" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td width="80" style="background-image:url('/openeducat_credenciales/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/openeducat_credenciales/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
+                                                <td>
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td>
+                                                                <div align="center">
+                                                                    <img t-attf-src="/openeducat_credenciales/static/src/img/logocolor.png" style="width:100px; height:70px"/>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <div style="font-size:10px; padding-left: 9px; padding-right: 9px">
+                                                                    <strong>Nombre Completo:</strong>
+                                                                    <br/>
+                                                                    <span t-field="o.name"/>
+                                                                    <br/>
+                                                                    <br/>
+                                                                    <strong>Firma del estudiante:</strong>
+                                                                    <br/>
+                                                                    <strong>_____________________</strong>
+                                                                    <br/>
+                                                                    <span t-field="o.category_id"/>
+                                                                    <br/>
+                                                                    <br/>
+                                                                    <strong>Clave Carrera:</strong>
+                                                                    <span t-field="o.category_id.clave_carrera"/>
+                                                                    <br/>
+                                                                    <strong>CCT:</strong>
+                                                                    <span t-field="o.centro_trabajo"/>
+                                                                    <br/>
+                                                                    <strong>Vigencia credencial:</strong>
+                                                                    <span t-field="o.vigencia_credencial"/>
+                                                                    <br/>
+                                                                    <br/>
+                                                                    <p style="font-style: italic;font-size:8px;text-align:justify">
+                                                                        "Esta credencial es personal e intransferible y
+                                                                        de exclusiva responsabilidad del estudiante.
+                                                                        Cualquier asunto sobre el mismo pueden enviarnos
+                                                                        un correo a: s.escolares@idr.edu.mx o llamar al
+                                                                        número: 55 27 57 59 75."
+                                                                    </p>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}" align="absmiddle" style="margin-top:-10px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
+                                                            </td>
+                                                            <tr>
+                                                                <td>
+                                                                    <strong/>
+                                                                    <span align="absmiddle" style="vertical-align:middle;padding: 0px 5px 0px 5px; float:right;font-size:8px;">
+                                                                        https://uidr.mx/
+                                                                    </span>
+                                                                    <br/>
+                                                                </td>
+                                                            </tr>
+                                                        </tr>
+
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+<!--        </t>-->
+<!--    </data>-->
+</odoo>
