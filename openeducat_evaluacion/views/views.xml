@@ -3,39 +3,26 @@
 
 
   <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
-    <xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
+      <xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
+          <p>Genero: <span t-field="user_id.gender"/></p>
+          <p>Fecha de Nacimiento:  <span t-field="user_id.user_line.birth_date"/> </p>
+          <p>Visa Info: <span t-field="user_id.user_line.visa_info"/> </p>
+          <div t-field="user_id.user_line.blood_group"/>
+          <div t-field="user_id.user_line.emergency_contact"/>
+          <div t-field="user_id.user_line.phone"/>
+          <div t-field="user_id.user_line.email"/>
+          <div t-field="user_id.user_line.enrollment_number"/>
+          <div t-field="user_id.user_line.centro_trabajo"/>
+          <div t-field="user_id.user_line.rfc"/>
+          <div t-field="user_id.user_line.registration_date"/>
+          <div t-field="user_id.user_line.nationality"/>
+          <div t-field="user_id.user_line.category_id.name"/>
+          <div t-field="user_id.user_line.mobile"/>
+          <div t-field="user_id.user_line.user_id"/>
+          <div t-field="user_id.user_line.institutional_email"/>
+          <div t-field="user_id.user_line.vigencia_credencial"/>
+          <div t-field="user_id.user_line.curp"/>
 
-<!--      <div t-field="user_id.partner_id"/>-->
-      <div t-field="user_id.gender"/>
-      <div t-field="user_id.student_line.visa_info"/>
-      <div t-field="user_id.student_line.birth_date"/>
-<!--      <div t-field="user_id.student_line.blood_group"/>-->
-      <h1>holasasd</h1>
-<!--      <div t-field="user_id.partner_id.birth_date"/>-->
-<!--      <div t-field="user_id.visa_info"/>-->
-<!--      <div t-field="user_id.blood_group"/>-->
-<!--      <div t-field="user_id.emergency_contact"/>-->
-<!--      <div t-field="user_id.phone"/>-->
-<!--      <div t-field="user_id.email"/>-->
-<!--      <div t-field="user_id.enrollment_number"/>-->
-<!--      <div t-field="user_id.centro_trabajo"/>-->
-<!--      <div t-field="user_id.rfc"/>-->
-<!--      <div t-field="user_id.registration_date"/>-->
-<!--      <div t-field="user_id.nationality"/>-->
-<!--      <div t-field="user_id.category_id"/>-->
-<!--      <div t-field="user_id.mobile"/>-->
-<!--      <div t-field="user_id.user_id"/>-->
-<!--      <div t-field="user_id.institutional_email"/>-->
-<!--      <div t-field="user_id.vigencia_credencial"/>-->
-<!--      <div t-field="user_id.curp"/>-->
-
-<!--      <t t-esc="user_id.partner_id"/>-->
-<!--      <div t-field="user_id.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;email&quot;, &quot;phone&quot;, &quot;address&quot;, &quot;gender&quot;]}"/>-->
-
-    </xpath>
-
-
+      </xpath>
   </template>
-
-
 </odoo>
