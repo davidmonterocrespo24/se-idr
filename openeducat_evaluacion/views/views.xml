@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--  <template id="portal_home_inherit" inherit_id="portal.portal_my_home" name="Portal Home Inherit">-->
+<!--    <xpath expr="//h3" position="after">-->
+
+<!--      <h1>hola mundo</h1>-->
+
+<!--    </xpath>-->
+<!--  </template>-->
+
+  <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
+    <xpath expr="//div[hasclass('o_portal_my_details')]" position="inside">
+
+<!--      <div t-field="user_id.partner_id"/>-->
+      <div t-field="user_id.gender"/>
+      <div t-field="user_id.student_line.visa_info"/>
+      <div t-field="user_id.student_line.birth_date"/>
+<!--      <div t-field="user_id.student_line.blood_group"/>-->
+      <h1>holasasd</h1>
+<!--      <div t-field="user_id.partner_id.birth_date"/>-->
+<!--      <div t-field="user_id.visa_info"/>-->
+<!--      <div t-field="user_id.blood_group"/>-->
+<!--      <div t-field="user_id.emergency_contact"/>-->
+<!--      <div t-field="user_id.phone"/>-->
+<!--      <div t-field="user_id.email"/>-->
+<!--      <div t-field="user_id.enrollment_number"/>-->
+<!--      <div t-field="user_id.centro_trabajo"/>-->
+<!--      <div t-field="user_id.rfc"/>-->
+<!--      <div t-field="user_id.registration_date"/>-->
+<!--      <div t-field="user_id.nationality"/>-->
+<!--      <div t-field="user_id.category_id"/>-->
+<!--      <div t-field="user_id.mobile"/>-->
+<!--      <div t-field="user_id.user_id"/>-->
+<!--      <div t-field="user_id.institutional_email"/>-->
+<!--      <div t-field="user_id.vigencia_credencial"/>-->
+<!--      <div t-field="user_id.curp"/>-->
+
+<!--      <t t-esc="user_id.partner_id"/>-->
+<!--      <div t-field="user_id.partner_id" t-options="{&quot;widget&quot;: &quot;contact&quot;, &quot;fields&quot;: [&quot;email&quot;, &quot;phone&quot;, &quot;address&quot;, &quot;gender&quot;]}"/>-->
+
+    </xpath>
+
+
+  </template>
+
+
+</odoo>
