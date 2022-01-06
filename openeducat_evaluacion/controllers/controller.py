@@ -13,6 +13,7 @@ class CustomerPortal(CustomerPortal):
 
     @http.route(['/credencial'], type='http', auth="user", website=True)
     def credencial(self, **kw):
+        values={}
         values.update({
             'docs': request.user_id.user_line,
         })
