@@ -12,7 +12,7 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager as porta
 class CustomerPortal(CustomerPortal):
 
     @http.route(['/credencial'], type='http', auth="user", website=True)
-    def home(self, **kw):
+    def credencial(self, **kw):
         values.update({
             'docs': request.user_id.user_line,
         })
