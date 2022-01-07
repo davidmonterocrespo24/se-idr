@@ -19,3 +19,6 @@ class CustomerPortal(CustomerPortal):
         })
 
         return request.render("openeducat_evaluacion.report_credencial_template_website", values)
+
+
+

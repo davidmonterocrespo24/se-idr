@@ -15,7 +15,7 @@
     'version': '13.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','openeducat_erp','website','se_openeducat_se_idr'],
+    'depends': ['base','openeducat_erp','website','se_openeducat_se_idr','portal','mail'],
 
     # always loaded
     'data': [

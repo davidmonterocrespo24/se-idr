@@ -2,6 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+D:\proyectos_odoo14\se-idr\.idea
+/workspace.xml
 
 # C extensions
 *.so

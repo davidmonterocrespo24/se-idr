@@ -175,6 +175,11 @@
                             </table>
 
                         </div>
+                        <br/>
+                        <div>
+                            <br/><br/><br/><br/><br/><br/><br/><br/>
+                            <a class="btn btn-secondary btn-block o_print_btn o_portal_invoice_print" t-attf-href="/report/pdf/openeducat_credenciales.report_credencial_template/#{user_id.user_line.id}" id="print_invoice_credencial" title="Descargar" target="_blank"><i class="fa fa-download"/>     Descargar </a>
+                        </div>
                     </div>
                 </t>
             </t>
