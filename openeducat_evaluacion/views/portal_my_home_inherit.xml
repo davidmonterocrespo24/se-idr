@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_mydetails_home_link_inherit" inherit_id="portal.portal_my_home">
+        <xpath expr="//h3" position="after">
+                <a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between" href="/credencial" title="Facturas">
+                    Mi Credencial
+                </a>
+        </xpath>
+    </template>
+
+</odoo>

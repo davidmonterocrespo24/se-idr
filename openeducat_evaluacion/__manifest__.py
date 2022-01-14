@@ -21,8 +21,9 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/op_subject_inherit_view.xml',
-        'views/views.xml',
+        'views/portal_my_home_inherit.xml',
         'views/card_student_website.xml',
+        'views/portal_layout_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

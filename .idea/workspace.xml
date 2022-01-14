@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb8a5b8-c6de-4ddc-af29-18a669a2d6a3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/se-idr.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/portal_my_home_inherit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/controllers/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/controllers/controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/op_student_inherit.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/op_student_inherit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/card_student_website.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/card_student_website.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/op_subject_inherit.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/op_subject_inherit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/portal_layout_inherit.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +17,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="OdooModel" />
         <option value="OdooViewEmpty" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="23N7RTmU2r46GruaojCSibXsLAb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -35,14 +35,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultOdooModelFileTemplate" value="OdooModel" />
     <property name="DefaultOdooViewFileTemplate" value="OdooViewEmpty" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../proyectos_odoo12" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../openeducat_erp" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.odoo13">
     <configuration name="odoo13" type="PythonConfigurationType" factoryName="Python">
-      <module name="se-idr" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -53,8 +54,9 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../INSTALACIONESODOO/odoo_13/odoo-bin" />
-      <option name="PARAMETERS" value="--conf D:\INSTALACIONESODOO\odoo_13\odoo.conf -u openeducat_evaluacion" />
+      <option name="PARAMETERS" value="--conf D:\INSTALACIONESODOO\odoo_13\odoo.conf -u gdu_tramites,gdu_pcti,openeducat_evaluacion" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -62,6 +64,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="odoo13postgres12" type="PythonConfigurationType" factoryName="Python">
+      <module name="tramites" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\python3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../INSTALACIONESODOO/odoopostgres12/odoo_13" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../INSTALACIONESODOO/odoopostgres12/odoo_13/odoo-bin" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.odoo13" />
+      <item itemvalue="Python.odoo13postgres12" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -84,6 +111,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

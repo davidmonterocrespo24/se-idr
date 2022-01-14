@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-
-  <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
+    <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
       <xpath expr="//div[hasclass('o_portal_my_details')]" position="replace">
           <h3>Mis Datos</h3>
           <p><strong>Genero: </strong><span t-field="user_id.user_line.gender"/> </p>
