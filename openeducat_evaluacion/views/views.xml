@@ -5,7 +5,7 @@
   <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
       <xpath expr="//div[hasclass('o_portal_my_details')]" position="replace">
           <h3>Mis Datos</h3>
-          <p><strong>Genero: </strong><span t-field="user_id.gender"/> </p>
+          <p><strong>Genero: </strong><span t-field="user_id.user_line.gender"/> </p>
           <p><strong>Fecha de Nacimiento: </strong><span t-field="user_id.user_line.birth_date"/> </p>
           <p><strong>Visa Info: </strong><span t-field="user_id.user_line.visa_info"/> </p>
           <p><strong>Grupo sanguíneo: </strong><span t-field="user_id.user_line.blood_group"/> </p>
