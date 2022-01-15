@@ -2,5 +2,6 @@ from odoo import fields, models, api
 
 
 class OpstudentInherit(models.Model):
-    _name = 'hola.hola'
-    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin']
+    _name = 'op.subject'
+
+    nota = fields.Float(string='Nota', required=False)

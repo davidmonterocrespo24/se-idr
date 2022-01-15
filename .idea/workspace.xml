@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb8a5b8-c6de-4ddc-af29-18a669a2d6a3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/portal_my_home_inherit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/op_exam_attendees_inherit_view.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/op_student_inherit.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/op_student_inherit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/models/op_subject_inherit.py" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/models/op_subject_inherit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit_view.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/openeducat_evaluacion/views/portal_layout_inherit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openeducat_evaluacion/views/op_subject_inherit_view.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -20,10 +20,11 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        'views/op_subject_inherit_view.xml',
+        'views/op_exam_attendees_inherit_view.xml',
         'views/portal_my_home_inherit.xml',
         'views/card_student_website.xml',
         'views/portal_layout_inherit.xml',
+        'views/op_subject_inherit.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
