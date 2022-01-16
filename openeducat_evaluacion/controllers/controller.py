@@ -11,7 +11,7 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager as porta
 
 class CustomerPortal(CustomerPortal):
 
-    @http.route(['/credencial'], type='http', auth="user", website=True)
+    @http.route(['/credencial'], type='http', auth="public", website=True)
     def credencial(self, **kw):
         values = {}
         values.update({
