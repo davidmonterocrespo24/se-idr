@@ -18,7 +18,7 @@ class CustomerPortal(CustomerPortal):
             'docs': request.env.user.user_line,
         })
 
-        return request.render("openeducat_evaluacion.report_credencial_template_website", values)
+        return request.render("openeducat_credenciales.report_credencial_template_website", values)
 
 
 
