@@ -1,7 +1,6 @@
 from odoo import fields, models, api
 
-
 class Course(models.Model):
-    _inherit = 'op.subject'
+    _inherit = 'op.exam.attendees'
 
-    calificacion = fields.Float(string=u'Calificación', required=False)
+    evaluacion = fields.Float(string=u'Evaluación', required=False)

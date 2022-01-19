@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!--        <record id="op_subject_form_inherit" model="ir.ui.view">-->
+<!--            <field name="name">op.subject.form</field>-->
+<!--            <field name="model">op.subject</field>-->
+<!--            <field name="inherit_id" ref="openeducat_core.view_op_subject_form"/>-->
+<!--            <field name="priority" eval="8"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//field[@name='subject_type']" position="after">-->
+<!--                    <field name="calificacion"/>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+
+        <record id="examenes_asistentes" model="ir.ui.view">
+            <field name="name">Examenes asistentes</field>
+            <field name="model">op.exam.attendees</field>
+            <field name="inherit_id" ref="openeducat_exam.view_op_exam_attendees_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='status']" position="after">
+                    <field name="evaluacion"/>
+                </xpath>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

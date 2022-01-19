@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/gestor_proyectos/gdu_pcti/.idea/gdu_pcti.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/gestor_proyectos/gdu_pcti/.idea/gdu_pcti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/tramites/gdu_tramites/.idea/gdu_tramites.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/tramites/gdu_tramites/.idea/gdu_tramites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/tramites/.idea/tramites.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/tramites/.idea/tramites.iml" />
+    </modules>
+  </component>
+</project>
