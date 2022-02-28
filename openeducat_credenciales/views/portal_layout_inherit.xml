@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_mydetails_home_inherit" inherit_id="portal.portal_layout">
+      <xpath expr="//div[hasclass('o_portal_my_details')]" position="replace">
+          <h3>Mis Datos</h3>
+          <div class="row">
+
+            <div class="col-6">
+                <p><strong>Género: </strong><span t-field="user_id.user_line.gender"/> </p>
+                <p><strong>Fecha de Nacimiento: </strong><span t-field="user_id.user_line.birth_date"/> </p>
+                <p><strong>Visa Info: </strong><span t-field="user_id.user_line.visa_info"/> </p>
+                <p><strong>Grupo sanguíneo: </strong><span t-field="user_id.user_line.blood_group"/> </p>
+                <p><strong>Contacto de emergencia: </strong><span t-field="user_id.user_line.emergency_contact"/> </p>
+                <p><strong>Teléfono: </strong><span t-field="user_id.user_line.phone"/> </p>
+                <p><strong>Correo electrónico: </strong><span t-field="user_id.user_line.email"/> </p>
+                <p><strong>Número de Matrícula: </strong><span t-field="user_id.user_line.enrollment_number"/> </p>
+                <p><strong>CCT: </strong><span t-field="user_id.user_line.centro_trabajo"/> </p>
+            </div>
+
+            <div class="col-6">
+                <p><strong>RFC: </strong><span t-field="user_id.user_line.rfc"/> </p>
+                <p><strong>Fecha de registro: </strong><span t-field="user_id.user_line.registration_date"/> </p>
+                <p><strong>Nacionalidad: </strong><span t-field="user_id.user_line.nationality"/> </p>
+                <p><strong>Categoría: </strong><span t-field="user_id.user_line.category_id.name"/> </p>
+                <p><strong>Móvil: </strong><span t-field="user_id.user_line.mobile"/> </p>
+                <p><strong>Usuario: </strong><span t-field="user_id.user_line.user_id"/> </p>
+                <p><strong>Email Institucional: </strong><span t-field="user_id.user_line.institutional_email"/> </p>
+                <p><strong>Vigencia Credencial: </strong><span t-field="user_id.user_line.vigencia_credencial"/> </p>
+                <p><strong>CURP: </strong><span t-field="user_id.user_line.curp"/> </p>
+            </div>
+
+          </div>
+      </xpath>
+  </template>
+</odoo>
