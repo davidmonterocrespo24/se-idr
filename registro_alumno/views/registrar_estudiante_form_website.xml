@@ -7,10 +7,62 @@
             	<div id="registrar_form">
                 	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
                     	<div class="container">
-							<center><h3>Autos</h3></center>
+							<center><h3>Bienvenidos a IDR University</h3></center>
                         	<form action="/create_autos" id="request_form_registrar" method="post" enctype="multipart/form-data">
 								<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+								<h4>Datos del Alumno</h4>
+
+
                             	<div class="s_website_form_rows row s_col_no_bgcolor">
+
+									<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+										<div class="row s_col_no_resize s_col_no_bgcolor">
+											<label class="col-form-label col-sm-auto s_website_form_label"
+													style="width: 200px" >
+												<span class="s_website_form_label_content">Sexo</span>
+												<span class="s_website_form_mark">*</span>
+											</label>
+											<div class="col-sm">
+												<select type="select" name="genero" class="form-control" id="user_genero" required="">
+													<option value=""></option>
+													<option value="masculino">Masculino</option>
+													<option value="femenino">Femenino</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-12 s_website_form_field s_website_form_required">
+										<div class="row s_col_no_resize s_col_no_bgcolor">
+											<label class="col-form-label col-sm-auto s_website_form_label"
+													style="width: 200px" >
+												<span class="s_website_form_label_content">Nombre Asegurado</span>
+												<span class="s_website_form_mark">*</span>
+											</label>
+											<div class="col-sm">
+												<input type="text" id="contact_name"
+														class="form-control s_website_form_input" name="contact_name"
+														required=""/>
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
+											data-name="Field">
+											<div class="row s_col_no_resize s_col_no_bgcolor">
+												<label class="col-form-label col-sm-auto s_website_form_label"
+													style="width: 200px" >
+													<span class="s_website_form_label_content">Fecha de Nacimiento</span>
+													<span class="s_website_form_mark">*</span>
+												</label>
+												<div class="col-sm">
+													<input type="date" required=""
+														class="form-control s_website_form_input" name="date_birth"/>
+												</div>
+											</div>
+										</div>
+
+
 									<div class="form-group col-12 s_website_form_field s_website_form_required"
                                      	data-type="char" data-name="Field">
                                     	<div class="row s_col_no_resize s_col_no_bgcolor">
@@ -25,20 +77,7 @@
                                         	</div>
                                     	</div>
                                 	</div>
-                                	<div class="form-group col-12 s_website_form_field s_website_form_required">
-                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
-                                        	<label class="col-form-label col-sm-auto s_website_form_label"
-                                               	style="width: 200px" >
-                                            	<span class="s_website_form_label_content">Nombre Asegurado</span>
-                                            	<span class="s_website_form_mark">*</span>
-                                        	</label>
-                                        	<div class="col-sm">
-                                            	<input type="text" id="contact_name"
-                                                   	class="form-control s_website_form_input" name="contact_name"
-                                                   	required=""/>
-                                        	</div>
-                                    	</div>
-                                	</div>
+
                                 	<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
                                      	data-name="Field">
                                     	<div class="row s_col_no_resize s_col_no_bgcolor">

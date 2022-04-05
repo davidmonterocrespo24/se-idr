@@ -3,7 +3,7 @@
     <data>
 
         <record id="website_menu_registrar_estudiante" model="website.menu">
-        	<field name="name">Registrar Estudiante</field>
+        	<field name="name">Registro</field>
         	<field name="url">/registrar</field>
         	<field name="parent_id" ref="website.main_menu"/>
         	<field name="sequence" type="int">50</field>
