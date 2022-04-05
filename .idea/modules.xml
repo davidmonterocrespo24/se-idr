@@ -4,7 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/gestor_proyectos/gdu_pcti/.idea/gdu_pcti.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/gestor_proyectos/gdu_pcti/.idea/gdu_pcti.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/tramites/gdu_tramites/.idea/gdu_tramites.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/tramites/gdu_tramites/.idea/gdu_tramites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo12/sagp/.idea/sagp.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo12/sagp/.idea/sagp.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo13/tramites/.idea/tramites.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo13/tramites/.idea/tramites.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../proyectos_odoo15/verticaL_construccion/.idea/verticaL_construccion.iml" filepath="$PROJECT_DIR$/../../proyectos_odoo15/verticaL_construccion/.idea/verticaL_construccion.iml" />
     </modules>
   </component>
 </project>

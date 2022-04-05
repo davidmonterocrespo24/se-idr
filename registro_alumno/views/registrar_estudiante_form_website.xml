@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="registrar_form">
+        	<t t-call="website.layout">
+            	<div id="registrar_form">
+                	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                    	<div class="container">
+							<center><h3>Autos</h3></center>
+                        	<form action="/create_autos" id="request_form_registrar" method="post" enctype="multipart/form-data">
+								<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                            	<div class="s_website_form_rows row s_col_no_bgcolor">
+									<div class="form-group col-12 s_website_form_field s_website_form_required"
+                                     	data-type="char" data-name="Field">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label"
+                                               	style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Correo Electrónico</span>
+                                            	<span class="s_website_form_mark">*</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<input id="email" type="email" placeholder="XXX@XXX.XXX"
+                                                   	class="form-control s_website_form_input" name="email" required=""/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+                                	<div class="form-group col-12 s_website_form_field s_website_form_required">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label"
+                                               	style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Nombre Asegurado</span>
+                                            	<span class="s_website_form_mark">*</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<input type="text" id="contact_name"
+                                                   	class="form-control s_website_form_input" name="contact_name"
+                                                   	required=""/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+                                	<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
+                                     	data-name="Field">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label"
+                                               	style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Número de Teléfono</span>
+												<span class="s_website_form_mark">*</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"
+                                                   	class="form-control s_website_form_input" name="phone" required=""/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+									<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
+                                     	data-name="Field">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label"
+                                               	style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Código Postal</span>
+												<span class="s_website_form_mark">*</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<input type="text" id="cp" pattern="([0-9]{4})|([0-9]{5})" placeholder="0000 o 00000"
+                                                   	class="form-control s_website_form_input" name="cp" required=""/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+
+									<div class="form-group col-12 s_website_form_field"
+                                     	data-type="text" data-name="Field">
+                                    	<div class="row s_col_no_resize s_col_no_bgcolor">
+                                        	<label class="col-form-label col-sm-auto s_website_form_label"
+                                               	style="width: 200px" >
+                                            	<span class="s_website_form_label_content">Comentario</span>
+                                        	</label>
+                                        	<div class="col-sm">
+                                            	<textarea class="form-control s_website_form_input" id="description"
+                                                      	name="description"/>
+                                        	</div>
+                                    	</div>
+                                	</div>
+									<div class="container">
+										<div class="form-group row">
+											<div class="col-sm-10">
+												<button type="submit" class="btn btn-primary">Cotizar</button>
+											</div>
+										</div>
+									</div>
+                            	</div>
+                        	</form>
+                    	</div>
+                	</section>
+            	</div>
+        	</t>
+    	</template>
+
+    </data>
+</odoo>

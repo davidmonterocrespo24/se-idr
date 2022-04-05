@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="message_success" name="message_success">
+            <t t-call="website.layout">
+                <div class="oe_structure">
+                    <div class="container">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h1 class="text-center font-weight-bold">Se a enviado la solicitud</h1>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>
