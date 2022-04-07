@@ -30,14 +30,15 @@ class RegistrarEstudiante(http.Controller):
     @http.route('/create_student', auth='public', type='http', website=True)
     def create_student_fathers(self, **kw):
         request.env['op.student'].sudo().create({
+            'name': kw.get('name_student'),
             'first_name': kw.get('name_student'),
             'middle_name': kw.get('apellido_paterno_student'),
             'last_name': kw.get('apellido_materno_student'),
-            'gender': kw.get('student_genero'),
-            'birth_date': kw.get('date_birth'),
-            'email': kw.get('email_student'),
-            'mobile': kw.get('mobile_student'),
-            'phone': kw.get('mobile_student'),
+            # 'gender': kw.get('student_genero'),
+            # 'birth_date': kw.get('date_birth'),
+            # 'email': kw.get('email_student'),
+            # 'mobile': kw.get('mobile_student'),
+            # 'phone': kw.get('mobile_student'),
             # 'marca': kw.get('marca_id'),
             # # 'sub_marca': kw.get('submarca_id'),
             # # 'modelo': kw.get('modelo_id'),
