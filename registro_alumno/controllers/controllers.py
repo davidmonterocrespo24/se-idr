@@ -27,18 +27,30 @@ class RegistrarEstudiante(http.Controller):
 
 
     # # Crear el estudiante
-    # @http.route('/create_autos', auth='public', type='http', website=True)
-    # def create_oportunidad_auto(self, **kw):
-    #     request.env['crm.lead'].sudo().create({
-    #         'name': 'Auto',
-    #         'email_from': kw.get('email'),
-    #         'contact_name': kw.get('contact_name'),
-    #         'phone': kw.get('phone'),
-    #         'cp': kw.get('cp'),
-    #         'marca': kw.get('marca_id'),
-    #         'sub_marca': kw.get('submarca_id'),
-    #         'modelo': kw.get('modelo_id'),
-    #         'description': kw.get('description'),
-    #
-    #     })
-    #     return request.redirect('/message_success')
+    @http.route('/create_student', auth='public', type='http', website=True)
+    def create_student_fathers(self, **kw):
+        request.env['op.student'].sudo().create({
+            'first_name': kw.get('name_student'),
+            'middle_name': kw.get('apellido_paterno_student'),
+            'last_name': kw.get('apellido_materno_student'),
+            'gender': kw.get('student_genero'),
+            'birth_date': kw.get('date_birth'),
+            'email': kw.get('email_student'),
+            'mobile': kw.get('mobile_student'),
+            'phone': kw.get('mobile_student'),
+            # 'marca': kw.get('marca_id'),
+            # # 'sub_marca': kw.get('submarca_id'),
+            # # 'modelo': kw.get('modelo_id'),
+            # # 'description': kw.get('description'),
+
+        })
+
+        # request.env['res.partner'].sudo().create({
+        #     'is_parent': True,
+        #     'name': kw.get('name_father') + kw.get('apellido_paterno_father') + kw.get('apellido_materno_father'),
+        #     'email': kw.get('email_father'),
+        #     'mobile': kw.get('mobile_father'),
+        #     'phone': kw.get('phone_oficina'),
+        #
+        # })
+        return request.redirect('/message_success')

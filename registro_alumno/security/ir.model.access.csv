@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_prueba_prueba,prueba.prueba,model_prueba_prueba,,1,0,0,0
+access_op_estudentt_alumno,op_estudentt_alumno,openeducat_core.model_op_student,base.group_portal,1,1,1,0
