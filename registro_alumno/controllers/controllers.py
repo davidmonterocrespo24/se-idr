@@ -16,42 +16,46 @@ class RegistrarEstudiante(http.Controller):
     # Registrar estudiante form metodo
     @http.route(['/registrar'], type='http', auth="public", website=True)
     def registrar_request(self):
-        # modelo = request.env['vehicle.model'].search([])
+        relationship = request.env['op.parent.relationship'].search([])
         # marca = request.env['vehicle.model.brand'].search([])
-        # values = {
-        #     'modelo': modelo,
-        #     'marca': marca
-        # }
+        values = {
+            'relationship': relationship,
+        }
         # return request.render("registro_alumno.autos_form", values)
-        return request.render("registro_alumno.registrar_form")
+        return request.render("registro_alumno.registrar_form", values)
 
 
     # # Crear el estudiante
     @http.route('/create_student', auth='public', type='http', website=True)
     def create_student_fathers(self, **kw):
         request.env['op.student'].sudo().create({
-            'name': kw.get('name_student'),
+            'name': kw.get('name_student') + " " + kw.get('apellido_paterno_student') + " " + kw.get('apellido_materno_student'),
             'first_name': kw.get('name_student'),
             'middle_name': kw.get('apellido_paterno_student'),
             'last_name': kw.get('apellido_materno_student'),
-            # 'gender': kw.get('student_genero'),
-            # 'birth_date': kw.get('date_birth'),
-            # 'email': kw.get('email_student'),
-            # 'mobile': kw.get('mobile_student'),
-            # 'phone': kw.get('mobile_student'),
-            # 'marca': kw.get('marca_id'),
-            # # 'sub_marca': kw.get('submarca_id'),
-            # # 'modelo': kw.get('modelo_id'),
-            # # 'description': kw.get('description'),
-
+            'gender': kw.get('student_genero'),
+            'birth_date': kw.get('date_birth'),
+            'email': kw.get('email_student'),
+            'mobile': kw.get('mobile_student'),
+            'observaciones': kw.get('observaciones'),
+        })
+        request.env['res.partner'].sudo().create({
+            'is_parent': True,
+            'name': kw.get('name_1') + " " + kw.get('apellido_paterno_1') + " " + kw.get('apellido_materno_1'),
+            'email': kw.get('email_1'),
+            'mobile': kw.get('mobile_1'),
+            'phone': kw.get('phone_1'),
         })
 
-        # request.env['res.partner'].sudo().create({
-        #     'is_parent': True,
-        #     'name': kw.get('name_father') + kw.get('apellido_paterno_father') + kw.get('apellido_materno_father'),
+        # estudent_id = request.env['op.parent.relationship'].search([('first_name', '=', kw.get('name_student'))])
+        # print(estudent_id.name)
+        # request.env['op.parent'].sudo().create({
+        #     # 'is_parent': True,
+        #     'name': kw.get('name_1') + kw.get('apellido_paterno_1') + kw.get('apellido_materno_1'),
         #     'email': kw.get('email_father'),
         #     'mobile': kw.get('mobile_father'),
         #     'phone': kw.get('phone_oficina'),
+        #     'relationship_id': kw.get('relationship_id_1'),
         #
         # })
         return request.redirect('/message_success')

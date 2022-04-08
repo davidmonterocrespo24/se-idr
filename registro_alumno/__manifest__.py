@@ -26,7 +26,7 @@
         'views/menu_website.xml',
         'views/registrar_estudiante_form_website.xml',
         'views/message_success_website.xml',
-        'views/views.xml',
+        'views/view_op_student_inherit.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

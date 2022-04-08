@@ -4,406 +4,125 @@
 
         <template id="registrar_form">
         	<t t-call="website.layout">
-            	<div id="registrar_form">
-                	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+            	<div id="registrar_form" class="oe_structure">
+<!--                	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">-->
                     	<div class="container">
-							<center><h3>Bienvenidos a IDR University</h3></center>
+							<center><h1 class="text-center font-weight-bold">Bienvenidos a IDR University</h1></center>
                         	<form action="/create_student" id="request_form_registrar" method="post" enctype="multipart/form-data">
 								<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-<!--								<h4>Datos del Alumno</h4>-->
-
-
-                            	<div class="s_website_form_rows row s_col_no_bgcolor">
-                            		<div class="s_website_form_rows row s_col_no_bgcolor">
-										<h4>Datos del Alumno</h4>
-
-
-										<!--Nombre y apellidos 2-->
-										<div class="row">
-											<div class="form-group col s_website_form_field s_website_form_required">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-															style="width: 200px" >
-														<span class="s_website_form_label_content">Nombre(s)</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<input type="text" id="name_student"
-																class="form-control s_website_form_input" name="name_student"
-																required=""/>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col s_website_form_field s_website_form_required">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-															style="width: 200px" >
-														<span class="s_website_form_label_content">Apellido Paterno</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<input type="text" id="apellido_paterno_student"
-																class="form-control s_website_form_input" name="apellido_paterno_student"
-																required=""/>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col s_website_form_field s_website_form_required">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-															style="width: 200px" >
-														<span class="s_website_form_label_content">Apellido Materno</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<input type="text" id="apellido_materno_student"
-																class="form-control s_website_form_input" name="apellido_materno_student"
-																required=""/>
-													</div>
-												</div>
-											</div>
+								<div class="container">
+									<h2 class="font-weight-bold">DATOS DEL ALUMNO</h2>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="name_student" class="col-m-12 col-form-label">Nombre(s):</label>
+											<input type="text" class="form-control" name="name_student" required="True"/>
 										</div>
-
-										<!--sexo-->
-										<div class="row">
-											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-															style="width: 200px" >
-														<span class="s_website_form_label_content">Sexo</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<select type="select" name="student_genero" class="form-control" id="student_genero" required="">
-															<option value=""></option>
-															<option value="m">Masculino</option>
-															<option value="f">Femenino</option>
-														</select>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
-												data-name="Field">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-														   style="width: 200px" >
-														<span class="s_website_form_label_content">Fecha de Nacimiento</span>
-														<span class="s_website_form_mark">*</span>
-													</label>
-													<div class="col-sm">
-														<input type="date" required=""
-															   class="form-control s_website_form_input" name="date_birth"/>
-													</div>
-												</div>
-											</div>
+										<div class="col-sm-3">
+											<label form="apellido_paterno_student" class="col-m-12 col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno_student" required="True"/>
 										</div>
-
-
-
-										<div class="row">
-											<div class="form-group col-12 s_website_form_field s_website_form_required"
-												data-type="char" data-name="Field">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-														style="width: 200px" >
-														<span class="s_website_form_label_content">Correo</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<input id="email" type="email" placeholder="XXX@XXX.XXX"
-															class="form-control s_website_form_input" name="email_student" required=""/>
-													</div>
-												</div>
-											</div>
-
-											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"
-												data-name="Field">
-												<div class="row s_col_no_resize s_col_no_bgcolor">
-													<label class="col-form-label col-sm-auto s_website_form_label"
-														style="width: 200px" >
-														<span class="s_website_form_label_content">Celular</span>
-														<span class="s_website_form_mark">:</span>
-													</label>
-													<div class="col-sm">
-														<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"
-															class="form-control s_website_form_input" name="mobile_student" required=""/>
-													</div>
-												</div>
-											</div>
+										<div class="col-sm-3">
+											<label form="apellido_materno_student" class="col-m-12 col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno_student" required="True"/>
 										</div>
 									</div>
-
-
-
-
-<!--									Datos papa-->
-<!--									<div class="s_website_form_rows row s_col_no_bgcolor">-->
-<!--										<h4>Datos Papá</h4>-->
-<!--										<div class="row">-->
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Nombre(s)</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="name_father"-->
-<!--																class="form-control s_website_form_input" name="name_father"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Apellido Paterno</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="apellido_paterno_father"-->
-<!--																class="form-control s_website_form_input" name="apellido_paterno_father"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Apellido Materno</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="apellido_materno_father"-->
-<!--																class="form-control s_website_form_input" name="apellido_materno_father"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-
-<!--										<div class="row">-->
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required"-->
-<!--												data-type="char" data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Correo</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input id="email" type="email" placeholder="XXX@XXX.XXX"-->
-<!--															class="form-control s_website_form_input" name="email_father" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-
-<!--										<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--											data-name="Field">-->
-<!--											<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--												<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--													   style="width: 200px" >-->
-<!--													<span class="s_website_form_label_content">Móvil</span>-->
-<!--													<span class="s_website_form_mark">:</span>-->
-<!--												</label>-->
-<!--												<div class="col-sm">-->
-<!--													<input type="tel" id="mobile_father" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--														   class="form-control s_website_form_input" name="mobile_father" required=""/>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-
-<!--										<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--											data-name="Field">-->
-<!--											<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--												<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--													   style="width: 200px" >-->
-<!--													<span class="s_website_form_label_content">Télefono Oficina</span>-->
-<!--													<span class="s_website_form_mark">:</span>-->
-<!--												</label>-->
-<!--												<div class="col-sm">-->
-<!--													<input type="tel" id="phone_oficina" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--														   class="form-control s_website_form_input" name="phone_oficina" required=""/>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-
-<!--									</div>-->
-
-<!--&lt;!&ndash;									Datos mama&ndash;&gt;-->
-<!--									<div class="s_website_form_rows row s_col_no_bgcolor">-->
-<!--										<h4>Datos Mamá</h4>-->
-<!--										<div class="row">-->
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Nombre(s)</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="contact_name"-->
-<!--																class="form-control s_website_form_input" name="contact_name"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Apellido Paterno</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="apellido_paterno"-->
-<!--																class="form-control s_website_form_input" name="apellido_paterno"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col s_website_form_field s_website_form_required">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--															style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Apellido Materno</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="text" id="apellido_materno"-->
-<!--																class="form-control s_website_form_input" name="apellido_materno"-->
-<!--																required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-
-<!--										<div class="row">-->
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required"-->
-<!--												data-type="char" data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Correo</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input id="email" type="email" placeholder="XXX@XXX.XXX"-->
-<!--															class="form-control s_website_form_input" name="email" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-<!--									</div>-->
-
-<!--&lt;!&ndash;									Datos telefono contacto&ndash;&gt;-->
-<!--									<div class="s_website_form_rows row s_col_no_bgcolor">-->
-<!--										<h4>Télefono Contacto</h4>-->
-<!--&lt;!&ndash;										<div>&ndash;&gt;-->
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--												data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">T.Casa</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--															class="form-control s_website_form_input" name="phone" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--												data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														   style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Télefono Oficina</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--															   class="form-control s_website_form_input" name="phone" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--												data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														   style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Celular Mama</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--															   class="form-control s_website_form_input" name="phone" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--											<div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char"-->
-<!--												data-name="Field">-->
-<!--												<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--													<label class="col-form-label col-sm-auto s_website_form_label"-->
-<!--														   style="width: 200px" >-->
-<!--														<span class="s_website_form_label_content">Otro Celular</span>-->
-<!--														<span class="s_website_form_mark">:</span>-->
-<!--													</label>-->
-<!--													<div class="col-sm">-->
-<!--														<input type="tel" id="phone" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"-->
-<!--															   class="form-control s_website_form_input" name="phone" required=""/>-->
-<!--													</div>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--									</div>-->
-<!--&lt;!&ndash;									</div>&ndash;&gt;-->
-
-
-<!--									<div class="s_website_form_rows row s_col_no_bgcolor">-->
-<!--										<h4>Observaciones</h4>-->
-<!--										<div class="form-group col-12 s_website_form_field"-->
-<!--											data-type="text" data-name="Field">-->
-<!--											<div class="row s_col_no_resize s_col_no_bgcolor">-->
-<!--&lt;!&ndash;												<label class="col-form-label col-sm-auto s_website_form_label"&ndash;&gt;-->
-<!--&lt;!&ndash;													style="width: 200px" >&ndash;&gt;-->
-<!--&lt;!&ndash;													<span class="s_website_form_label_content">Comentario</span>&ndash;&gt;-->
-<!--&lt;!&ndash;												</label>&ndash;&gt;-->
-<!--												<div class="col-sm-12">-->
-<!--													<textarea class="form-control s_website_form_input" id="observaciones"-->
-<!--															name="observaciones"/>-->
-<!--												</div>-->
-<!--											</div>-->
-<!--										</div>-->
-<!--									</div>-->
-
-
-
-
-
-									<div class="container">
-										<div class="form-group row">
-											<div class="col-sm-10">
-												<button type="submit" class="btn btn-primary">Cotizar</button>
-											</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="student_genero" class="col-m-12 col-form-label">Sexo:</label>
+<!--											<input type="text" class="form-control" name="student_genero" required="True"/>-->
+											<select type="select" name="student_genero" class="form-control" id="student_genero" required="True">
+												<option value=""></option>
+												<option value="m">Masculino</option>
+												<option value="f">Femenino</option>
+											</select>
 										</div>
 									</div>
-                            	</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="date_birth" class="col-m-12 col-form-label">Fecha de Nacimiento:</label>
+											<input type="date" class="form-control" name="date_birth" required="True"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="email_student" class="col-m-12 col-form-label">Correo:</label>
+											<input type="email" class="form-control" name="email_student"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="mobile_student" class="col-m-12 col-form-label">Celular:</label>
+											<input type="tel" class="form-control" name="mobile_student" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+									</div>
+								</div>
+
+								<div class="container">
+									<h2 class="font-weight-bold">DATOS PADRE O TUTOR</h2>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="name_1" class="col-m-12 col-form-label">Nombre(s):</label>
+											<input type="text" class="form-control" name="name_1" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_paterno_1" class="col-m-12 col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno_1" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_materno_1" class="col-m-12 col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno_1" required="True"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="relationship_id_1" class="col-m-12 col-form-label">Relación con el Estudiante:</label>
+											<select name="relationship_id_1" id="relationship_id_1" required="True"
+													class="form-control">
+												<option value="">Relación...</option>
+												<t t-foreach="relationship" t-as="relation">
+													<option t-att-value="relation.id">
+														<t t-esc="relation.name" t-att-value="relation.id"/>
+													</option>
+												</t>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="email_1" class="col-m-12 col-form-label">Correo:</label>
+											<input type="email" class="form-control" name="email_1"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="mobile_1" class="col-m-12 col-form-label">Movil:</label>
+											<input type="tel" class="form-control" name="mobile_1" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="phone_1" class="col-m-12 col-form-label">Teléfono de Oficina:</label>
+											<input type="tel" class="form-control" name="phone_1" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+									</div>
+								</div>
+								<div class="container">
+									<h2 class="font-weight-bold">OBSERVACIONES</h2>
+									<div class="row">
+										<div class="form-group col-12">
+											<textarea name="observaciones" id="observaciones" placeholder="Anotar si el estudiante tiene algo que debamos conocer como: Alergias, medicamentos, padecimiento, cuidado, etc..." style="min-height: 120px" class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+
+
+
+								<div class="container">
+									<div class="form-group row">
+										<div class="col-sm-10">
+											<button type="submit" class="btn btn-primary">Cotizar</button>
+										</div>
+									</div>
+								</div>
                         	</form>
                     	</div>
-                	</section>
+<!--                	</section>-->
             	</div>
         	</t>
     	</template>
