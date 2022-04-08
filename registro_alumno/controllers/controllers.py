@@ -28,7 +28,7 @@ class RegistrarEstudiante(http.Controller):
     # # Crear el estudiante
     @http.route('/create_student', auth='public', type='http', website=True)
     def create_student_fathers(self, **kw):
-        request.env['op.student'].sudo().create({
+        estudent = request.env['op.student'].sudo().create({
             'name': kw.get('name_student') + " " + kw.get('apellido_paterno_student') + " " + kw.get('apellido_materno_student'),
             'first_name': kw.get('name_student'),
             'middle_name': kw.get('apellido_paterno_student'),
@@ -39,7 +39,7 @@ class RegistrarEstudiante(http.Controller):
             'mobile': kw.get('mobile_student'),
             'observaciones': kw.get('observaciones'),
         })
-        request.env['res.partner'].sudo().create({
+        contacto_padre = request.env['res.partner'].sudo().create({
             'is_parent': True,
             'name': kw.get('name_1') + " " + kw.get('apellido_paterno_1') + " " + kw.get('apellido_materno_1'),
             'email': kw.get('email_1'),
@@ -48,14 +48,16 @@ class RegistrarEstudiante(http.Controller):
         })
 
         # estudent_id = request.env['op.parent.relationship'].search([('first_name', '=', kw.get('name_student'))])
-        # print(estudent_id.name)
-        # request.env['op.parent'].sudo().create({
-        #     # 'is_parent': True,
-        #     'name': kw.get('name_1') + kw.get('apellido_paterno_1') + kw.get('apellido_materno_1'),
-        #     'email': kw.get('email_father'),
-        #     'mobile': kw.get('mobile_father'),
-        #     'phone': kw.get('phone_oficina'),
-        #     'relationship_id': kw.get('relationship_id_1'),
-        #
-        # })
+        print(estudent.id)
+        print(contacto_padre.id)
+        request.env['op.parent'].sudo().create({
+            # 'is_parent': True,
+            'name': contacto_padre.id,
+            # 'email': kw.get('email_father'),
+            'mobile': kw.get('mobile_father'),
+            # 'phone': kw.get('phone_oficina'),
+            'relationship_id': kw.get('relationship_id_1'),
+            'student_ids': estudent,
+
+        })
         return request.redirect('/message_success')
