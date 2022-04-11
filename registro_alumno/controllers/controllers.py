@@ -60,23 +60,22 @@ class RegistrarEstudiante(http.Controller):
             'student_ids': estudent,
 
         })
+        if kw.get('name_2'):
+            otro_contacto = request.env['res.partner'].sudo().create({
+                'is_parent': True,
+                'name': kw.get('name_2') + " " + kw.get('apellido_paterno_2') + " " + kw.get('apellido_materno_2'),
+                'email': kw.get('email_2'),
+                'mobile': kw.get('mobile_2'),
+                'phone': kw.get('phone_2'),
+            })
 
-        otro_contacto = request.env['res.partner'].sudo().create({
-            'is_parent': True,
-            'name': kw.get('name_2') + " " + kw.get('apellido_paterno_2') + " " + kw.get('apellido_materno_2'),
-            'email': kw.get('email_2'),
-            'mobile': kw.get('mobile_2'),
-            'phone': kw.get('phone_2'),
-        })
-
-        request.env['op.parent'].sudo().create({
-            # 'is_parent': True,
-            'name': otro_contacto.id,
-            # 'email': kw.get('email_father'),
-            'mobile': kw.get('mobile_father'),
-            # 'phone': kw.get('phone_oficina'),
-            'relationship_id': kw.get('relationship_id_2'),
-            'student_ids': estudent,
-
-        })
+            request.env['op.parent'].sudo().create({
+                # 'is_parent': True,
+                'name': otro_contacto.id,
+                # 'email': kw.get('email_father'),
+                'mobile': kw.get('mobile_father'),
+                # 'phone': kw.get('phone_oficina'),
+                'relationship_id': kw.get('relationship_id_2'),
+                'student_ids': estudent,
+            })
         return request.redirect('/message_success')

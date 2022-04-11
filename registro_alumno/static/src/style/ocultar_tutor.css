@@ -1,8 +1,4 @@
-.bloqueocultotutor{
-    display: none;
-}
-
-.ver-menos{
-    display: none;
-}
+#bloqueocultotutor, #ver-menos{
+			display: none;
+		}
 
