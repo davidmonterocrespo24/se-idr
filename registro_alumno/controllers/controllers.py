@@ -48,8 +48,8 @@ class RegistrarEstudiante(http.Controller):
         })
 
         # estudent_id = request.env['op.parent.relationship'].search([('first_name', '=', kw.get('name_student'))])
-        print(estudent.id)
-        print(contacto_padre.id)
+        # print(estudent.id)
+        # print(contacto_padre.id)
         request.env['op.parent'].sudo().create({
             # 'is_parent': True,
             'name': contacto_padre.id,
@@ -57,6 +57,25 @@ class RegistrarEstudiante(http.Controller):
             'mobile': kw.get('mobile_father'),
             # 'phone': kw.get('phone_oficina'),
             'relationship_id': kw.get('relationship_id_1'),
+            'student_ids': estudent,
+
+        })
+
+        otro_contacto = request.env['res.partner'].sudo().create({
+            'is_parent': True,
+            'name': kw.get('name_2') + " " + kw.get('apellido_paterno_2') + " " + kw.get('apellido_materno_2'),
+            'email': kw.get('email_2'),
+            'mobile': kw.get('mobile_2'),
+            'phone': kw.get('phone_2'),
+        })
+
+        request.env['op.parent'].sudo().create({
+            # 'is_parent': True,
+            'name': otro_contacto.id,
+            # 'email': kw.get('email_father'),
+            'mobile': kw.get('mobile_father'),
+            # 'phone': kw.get('phone_oficina'),
+            'relationship_id': kw.get('relationship_id_2'),
             'student_ids': estudent,
 
         })

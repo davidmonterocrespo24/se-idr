@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_op_estudentt_alumno,op_estudentt_alumno,openeducat_core.model_op_student,base.group_portal,1,1,1,0
+access_op_estudentt_alumno,op_estudentt_alumno,openeducat_core.model_op_student,base.group_portal,1,1,1,1
+access_op_parent_relationship,op_parent_relationship,openeducat_parent.model_op_parent_relationship,base.group_portal,1,1,1,1
