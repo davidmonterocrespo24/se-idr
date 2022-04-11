@@ -16,7 +16,7 @@ class RegistrarEstudiante(http.Controller):
     # Registrar estudiante form metodo
     @http.route(['/registrar'], type='http', auth="public", website=True)
     def registrar_request(self):
-        relationship = request.env['op.parent.relationship'].search([])
+        relationship = request.env['op.parent.relationship'].sudo().search([])
         # marca = request.env['vehicle.model.brand'].search([])
         values = {
             'relationship': relationship,
