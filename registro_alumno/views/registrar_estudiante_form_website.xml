@@ -165,13 +165,20 @@
 										</div>
 									</div>
 								</div>
+								<div class="container text-danger">
+									<center>
+										<p>
+											NOTA: SÍ ES EL CASO Y EL ESTUDIANTE LO RECOGE UNA PERSONA DISTINTA A LOS PAPÁS, FAVOR DE INFORMARLO Y ESCRIBIRLO EN LA ZONA DE OBSERVACIONES.
+										</p>
+									</center>
+								</div>
 
 
 
 								<div class="container">
 									<div class="form-group row">
 										<div class="col-sm-10">
-											<button type="submit" class="btn btn-primary">Cotizar</button>
+											<button type="submit" class="btn btn-primary">Solicitar Alta</button>
 										</div>
 									</div>
 								</div>
