@@ -5,7 +5,6 @@
         <template id="registrar_form">
         	<t t-call="website.layout">
             	<div id="registrar_form" class="oe_structure">
-<!--                	<section class="s_website_form" data-vcss="001" data-snippet="s_website_form">-->
                     	<div class="container">
 							<center><h1 class="text-center font-weight-bold">Bienvenidos a IDR University</h1></center>
                         	<form action="/create_student" id="request_form_registrar" method="post" enctype="multipart/form-data">
@@ -29,7 +28,6 @@
 									<div class="row">
 										<div class="col-sm-3">
 											<label form="student_genero" class="col-m-12 col-form-label">Sexo:</label>
-<!--											<input type="text" class="form-control" name="student_genero" required="True"/>-->
 											<select type="select" name="student_genero" class="form-control" id="student_genero" required="True">
 												<option value=""></option>
 												<option value="m">Masculino</option>
@@ -103,11 +101,8 @@
 									</div>
 								</div>
 
-
-<!--								<button name="ocultar" id="ocultar" class="primary">ocultar</button>-->
 								<button type="button" id="ver-mas" href="javascript:void(0);" onclick="mostrarPremio();"> + Agregar Otro Contacto </button>
 								<button type="button" id="ver-menos" href="javascript:void(0);" onclick="ocultarPremio();"> + Ocultar </button>
-<!--								dddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
 								<div class="container bloqueocultotutor" id="bloqueocultotutor" name="bloqueocultotutor">
 									<h2 class="font-weight-bold">Otro Contacto:</h2>
 									<div class="row">
@@ -155,7 +150,6 @@
 										</div>
 									</div>
 								</div>
-<!--								dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd-->
 
 								<div class="container">
 									<h2 class="font-weight-bold">OBSERVACIONES:</h2>
@@ -184,7 +178,6 @@
 								</div>
                         	</form>
                     	</div>
-<!--                	</section>-->
             	</div>
         	</t>
     	</template>

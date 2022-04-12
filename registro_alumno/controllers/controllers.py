@@ -17,11 +17,9 @@ class RegistrarEstudiante(http.Controller):
     @http.route(['/registrar'], type='http', auth="public", website=True)
     def registrar_request(self):
         relationship = request.env['op.parent.relationship'].sudo().search([])
-        # marca = request.env['vehicle.model.brand'].search([])
         values = {
             'relationship': relationship,
         }
-        # return request.render("registro_alumno.autos_form", values)
         return request.render("registro_alumno.registrar_form", values)
 
 
@@ -47,9 +45,6 @@ class RegistrarEstudiante(http.Controller):
             'phone': kw.get('phone_1'),
         })
 
-        # estudent_id = request.env['op.parent.relationship'].search([('first_name', '=', kw.get('name_student'))])
-        # print(estudent.id)
-        # print(contacto_padre.id)
         request.env['op.parent'].sudo().create({
             # 'is_parent': True,
             'name': contacto_padre.id,
@@ -58,8 +53,8 @@ class RegistrarEstudiante(http.Controller):
             # 'phone': kw.get('phone_oficina'),
             'relationship_id': kw.get('relationship_id_1'),
             'student_ids': estudent,
-
         })
+
         if kw.get('name_2'):
             otro_contacto = request.env['res.partner'].sudo().create({
                 'is_parent': True,
@@ -70,11 +65,8 @@ class RegistrarEstudiante(http.Controller):
             })
 
             request.env['op.parent'].sudo().create({
-                # 'is_parent': True,
                 'name': otro_contacto.id,
-                # 'email': kw.get('email_father'),
                 'mobile': kw.get('mobile_father'),
-                # 'phone': kw.get('phone_oficina'),
                 'relationship_id': kw.get('relationship_id_2'),
                 'student_ids': estudent,
             })
