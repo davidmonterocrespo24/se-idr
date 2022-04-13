@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import http
+from odoo import exceptions, _
 from odoo.http import request
 from datetime import datetime, date, time, timedelta
 
@@ -37,6 +38,7 @@ class RegistrarEstudiante(http.Controller):
             'mobile': kw.get('mobile_student'),
             'observaciones': kw.get('observaciones'),
         })
+        estudent.is_student = True
         contacto_padre = request.env['res.partner'].sudo().create({
             'is_parent': True,
             'name': kw.get('name_1') + " " + kw.get('apellido_paterno_1') + " " + kw.get('apellido_materno_1'),
