@@ -108,22 +108,21 @@
 									<div class="row">
 										<div class="col-sm-3">
 											<label form="name_2" class="col-m-12 col-form-label">Nombre(s):</label>
-											<input type="text" class="form-control" name="name_2" required="True"/>
+											<input type="text" class="form-control" name="name_2"/>
 										</div>
 										<div class="col-sm-3">
 											<label form="apellido_paterno_2" class="col-m-12 col-form-label">Apellido Paterno:</label>
-											<input type="text" class="form-control" name="apellido_paterno_2" required="True"/>
+											<input type="text" class="form-control" name="apellido_paterno_2"/>
 										</div>
 										<div class="col-sm-3">
 											<label form="apellido_materno_2" class="col-m-12 col-form-label">Apellido Materno:</label>
-											<input type="text" class="form-control" name="apellido_materno_2" required="True"/>
+											<input type="text" class="form-control" name="apellido_materno_2"/>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-sm-3">
 											<label form="relationship_id_2" class="col-m-12 col-form-label">Relación con el Estudiante:</label>
-											<select name="relationship_id_2" id="relationship_id_2" required="True"
-													class="form-control">
+											<select name="relationship_id_2" id="relationship_id_2"	class="form-control">
 												<option value="">Relación...</option>
 												<t t-foreach="relationship" t-as="relation">
 													<option t-att-value="relation.id">
