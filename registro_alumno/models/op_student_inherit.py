@@ -20,12 +20,14 @@ except:
 class prueba(models.Model):
     _inherit = 'op.student'
 
-    edad = fields.Integer(string='Edad', readonly=True, required=False, compute="_compute_calcular_edad_")
+    edad = fields.Integer(string='Edad', readonly=True, required=False, compute="_compute_calcular_edad")
     observaciones = fields.Text(string="Observaciones", required=False)
 
     @api.depends('birth_date')
-    def _compute_calcular_edad_(self):
+    def _compute_calcular_edad(self):
         if self.birth_date:
             d1 = datetime.strptime(str(self.birth_date),"%Y-%m-%d").date()
             d2 = date.today()
             self.edad = relativedelta(d2,d1).years
+        else:
+            raise ValidationError("Debe introducir fecha de nacimiento")

@@ -19,8 +19,11 @@
                     </group>
                 </xpath>
 
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="required">False</attribute>
+                </xpath>
+
             </field>
         </record>
-
     </data>
 </odoo>
