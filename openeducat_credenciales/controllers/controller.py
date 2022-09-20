@@ -11,11 +11,14 @@ from odoo.addons.portal.controllers.portal import CustomerPortal, pager as porta
 
 class CustomerPortal(CustomerPortal):
 
-    @http.route(['/credencial'], type='http', auth="user", website=True)
+    @http.route(['/credencial'], type='http', auth="public", website=True)
     def credencial(self, **kw):
-        values={}
+        values = {}
         values.update({
             'docs': request.env.user.user_line,
         })
 
-        return request.render("openeducat_credenciales.report_credencial_template", values)
+        return request.render("openeducat_credenciales.report_credencial_template_website", values)
+
+
+

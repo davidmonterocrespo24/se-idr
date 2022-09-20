@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="registrar_form">
+        	<t t-call="website.layout">
+            	<div id="registrar_form" class="oe_structure">
+                    	<div class="container">
+							<center><h1 class="text-center font-weight-bold">FORMULARIO REGISTRO DE ESTUDIANTE IDR.</h1></center>
+                        	<form action="/create_student" id="request_form_registrar" method="post" enctype="multipart/form-data">
+								<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+								<div class="container">
+									<div class="s_alert alert-delta clearfix s_alert_md w-100 text-center" data-name="Alert">
+										<i class="fa fa-2x fa-info-circle s_alert_icon"></i>
+										<div class="s_alert_content">
+										  <p>Es <strong class="text-danger">IMPORTANTE</strong> registrar de forma <i><u>correcta, completa y verídica</u></i> cada uno de los campos del siguiente formulario.<br/><strong>LE RECOMENDAMOS</strong><strong class="text-danger"> VERIFICAR</strong><strong> TODO ANTES DE PROCESAR EL ENVÍO.</strong></p>
+										</div>
+									</div>
+									<h2 class="font-weight-bold">DATOS DEL ALUMNO:</h2>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="name_student" class="col-m-12 col-form-label">Nombre(s):</label>
+											<input type="text" class="form-control" name="name_student" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_paterno_student" class="col-m-12 col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno_student" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_materno_student" class="col-m-12 col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno_student" required="True"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="student_genero" class="col-m-12 col-form-label">Sexo:</label>
+											<select type="select" name="student_genero" class="form-control" id="student_genero" required="True">
+												<option value=""></option>
+												<option value="m">Masculino</option>
+												<option value="f">Femenino</option>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="date_birth" class="col-m-12 col-form-label">Fecha de Nacimiento:</label>
+											<input type="date" class="form-control" name="date_birth" required="True"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="email_student" class="col-m-12 col-form-label">Correo:</label>
+											<input type="email" class="form-control" name="email_student"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="mobile_student" class="col-m-12 col-form-label">Celular:</label>
+											<input type="tel" class="form-control" name="mobile_student" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+									</div>
+								</div>
+
+								<div class="container">
+									<h2 class="font-weight-bold">DATOS PADRE O TUTOR:</h2>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="name_1" class="col-m-12 col-form-label">Nombre(s):</label>
+											<input type="text" class="form-control" name="name_1" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_paterno_1" class="col-m-12 col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno_1" required="True"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_materno_1" class="col-m-12 col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno_1" required="True"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="relationship_id_1" class="col-m-12 col-form-label">Relación con el Estudiante:</label>
+											<select name="relationship_id_1" id="relationship_id_1" required="True"
+													class="form-control">
+												<option value="">Relación...</option>
+												<t t-foreach="relationship" t-as="relation">
+													<option t-att-value="relation.id">
+														<t t-esc="relation.name" t-att-value="relation.id"/>
+													</option>
+												</t>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="email_1" class="col-m-12 col-form-label">Correo:</label>
+											<input type="email" class="form-control" name="email_1"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="mobile_1" class="col-m-12 col-form-label">Movil:</label>
+											<input type="tel" class="form-control" name="mobile_1" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" required="True" placeholder="(00)-0000-0000"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="phone_1" class="col-m-12 col-form-label">Teléfono de Casa/Oficina:</label>
+											<input type="tel" class="form-control" name="phone_1" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" required="True" placeholder="(00)-0000-0000"/>
+										</div>
+									</div>
+								</div>
+
+								<button type="button" id="ver-mas" href="javascript:void(0);" onclick="mostrarPremio();"> + Agregar Otro Contacto </button>
+								<button type="button" id="ver-menos" href="javascript:void(0);" onclick="ocultarPremio();"> + Ocultar </button>
+								<div class="container bloqueocultotutor" id="bloqueocultotutor" name="bloqueocultotutor">
+									<h2 class="font-weight-bold">Otro Contacto:</h2>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="name_2" class="col-m-12 col-form-label">Nombre(s):</label>
+											<input type="text" class="form-control" name="name_2"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_paterno_2" class="col-m-12 col-form-label">Apellido Paterno:</label>
+											<input type="text" class="form-control" name="apellido_paterno_2"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="apellido_materno_2" class="col-m-12 col-form-label">Apellido Materno:</label>
+											<input type="text" class="form-control" name="apellido_materno_2"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="relationship_id_2" class="col-m-12 col-form-label">Relación con el Estudiante:</label>
+											<select name="relationship_id_2" id="relationship_id_2"	class="form-control">
+												<option value="">Relación...</option>
+												<t t-foreach="relationship" t-as="relation">
+													<option t-att-value="relation.id">
+														<t t-esc="relation.name" t-att-value="relation.id"/>
+													</option>
+												</t>
+											</select>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="email_2" class="col-m-12 col-form-label">Correo:</label>
+											<input type="email" class="form-control" name="email_2"/>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-sm-3">
+											<label form="mobile_2" class="col-m-12 col-form-label">Movil:</label>
+											<input type="tel" class="form-control" name="mobile_2" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+										<div class="col-sm-3">
+											<label form="phone_2" class="col-m-12 col-form-label">Teléfono de Oficina:</label>
+											<input type="tel" class="form-control" name="phone_2" pattern="[0-9]{2}[0-9]{4}[0-9]{4}" placeholder="(00)-0000-0000"/>
+										</div>
+									</div>
+								</div>
+
+								<div class="container">
+									<h2 class="font-weight-bold">OBSERVACIONES:</h2>
+									<div class="row">
+										<div class="form-group col-12">
+											<textarea name="observaciones" id="observaciones" placeholder="Anotar si el estudiante tiene algo que debamos conocer como: Alergias, medicamentos, padecimiento, cuidado, etc..." style="min-height: 120px" class="form-control"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="container text-danger">
+									<center>
+										<p>
+											<strong>
+												NOTA: SÍ ES EL CASO Y EL ESTUDIANTE LO RECOGE UNA PERSONA DISTINTA A LOS PAPÁS, FAVOR DE INFORMARLO Y ESCRIBIRLO EN LA ZONA DE OBSERVACIONES.
+											</strong>
+										</p>
+									</center>
+								</div>
+
+
+
+								<div class="container">
+									<div class="form-group row">
+										<div class="col-sm-10">
+											<button type="submit" class="btn btn-primary">Solicitar Alta</button>
+										</div>
+									</div>
+								</div>
+                        	</form>
+                    	</div>
+            	</div>
+        	</t>
+    	</template>
+
+    </data>
+</odoo>
