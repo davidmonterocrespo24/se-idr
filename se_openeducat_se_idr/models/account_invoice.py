@@ -13,3 +13,4 @@ class account_payment(models.Model):
 
 
     comprobantes = fields.Many2many("ir.attachment", string="Comprobante")
+    comprobantes_imagen = fields.Image(string="Comprobante(Imagen)")

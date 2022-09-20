@@ -9,6 +9,7 @@
             <field name="arch" type="xml">
                 <xpath expr="//form/sheet/group/group/field[@name='communication']" position="after">
                     <field name ="comprobantes" widget="many2many_binary"/>
+                    <field name ="comprobantes_imagen"/>
                 </xpath>
             </field>
         </record>
