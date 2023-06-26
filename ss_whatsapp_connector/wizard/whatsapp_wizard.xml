@@ -9,7 +9,7 @@
                 <form string="Send Whatsapp Message">
                     <group>
                         <group>
-                            <field name="user_id"/>
+                            <field name="user_id" attrs="{'invisible': [('user_id','=',False)]}"/>
                             <field name="message"/>
                         </group>
                         <field name="model" invisible="1"/>

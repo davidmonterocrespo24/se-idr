@@ -7,6 +7,7 @@ class WhatsappSendMessage(models.TransientModel):
 
     user_id = fields.Many2one('res.partner', string="Recipient")
     mobile_number = fields.Char(related='user_id.mobile', required=True)
+    mobile_number_alternative = fields.Char(required=False)
     message = fields.Text(string="Message")
     model = fields.Char('mail.template.model_id')
     template_id = fields.Many2one('mail.template', 'Use template', index=True,)

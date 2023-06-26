@@ -52,3 +52,16 @@ class WhatsappStudent(models.Model):
                 'view_type': 'form',
                 'context': {'default_user_id': self.partner_id.id},
                 }
+
+class WhatsappHrApplicant(models.Model):
+    _inherit = 'hr.applicant'
+
+    def hrapplicant_student_whatsapp(self):
+        return {'type': 'ir.actions.act_window',
+                'name': _('Send Whatsapp Message'),
+                'res_model': 'whatsapp.message.wizard',
+                'target': 'new',
+                'view_mode': 'form',
+                'view_type': 'form',
+                # 'context': {'default_user_id': self.partner_id.id},
+                }
