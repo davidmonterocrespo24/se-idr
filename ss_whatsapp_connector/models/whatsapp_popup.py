@@ -63,5 +63,5 @@ class WhatsappHrApplicant(models.Model):
                 'target': 'new',
                 'view_mode': 'form',
                 'view_type': 'form',
-                'context': {'mobile_number_alternative': self.partner_mobile},
+                'context': {'default_mobile_number_alternative': self.partner_mobile},
                 }

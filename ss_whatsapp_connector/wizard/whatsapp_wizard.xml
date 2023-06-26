@@ -13,6 +13,7 @@
                             <field name="message"/>
                         </group>
                         <field name="model" invisible="1"/>
+                        <field name="mobile_number_alternative" invisible="1"/>
                         <group>
                             <label for="mobile_number" string="Whatsapp Number" style="margin-left:25px !important;width:120px !important"/>
                             <field name="mobile_number" nolabel="1"/>

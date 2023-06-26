@@ -6,25 +6,20 @@ class WhatsappSendMessage(models.TransientModel):
     _name = 'whatsapp.message.wizard'
 
     user_id = fields.Many2one('res.partner', string="Recipient")
-    mobile_number = fields.Char(required=True)
+    mobile_number = fields.Char(required=True,compute='_compute_phone_number')
     mobile_number_alternative = fields.Char(required=False)
     message = fields.Text(string="Message")
     model = fields.Char('mail.template.model_id')
     template_id = fields.Many2one('mail.template', 'Use template', index=True,)
     
     
-    @api.depends('mobile_number_alternative')
+    @api.depends('user_id')
     def _compute_phone_number(self):
         if self.user_id:
             self.mobile_number = self.user_id.mobile
         
-        elif self.mobile_number_alternative:
+        else:
             self.mobile_number = self.mobile_number_alternative
-            
-            
-        
-    
-    
 
     @api.onchange('template_id')
     def onchange_template_id_wrapper(self):
