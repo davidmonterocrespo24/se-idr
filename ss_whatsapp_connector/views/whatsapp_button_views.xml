@@ -44,15 +44,9 @@
             <field name="model">op.student</field>
             <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
             <field name="arch" type="xml">
-<!--                <header>-->
-<!--                    <button name="student_whatsapp" string="Send Whatsapp" type="object" class="btn-secondary"-->
-<!--                            icon="fa-whatsapp" style="background-color:#b7ff8a"/>-->
-<!--                </header>-->
                 <xpath expr="//div[@name='smart_button']" position="inside">
-<!--                    <div class="oe_button_box" name="button_box">-->
                         <button name="student_whatsapp" string="Whatsapp Message" type="object" class="oe_stat_button"
                                 icon="fa-whatsapp" style="background-color:#b7ff8a"/>
-<!--                    </div>-->
                 </xpath>
             </field>
         </record>
