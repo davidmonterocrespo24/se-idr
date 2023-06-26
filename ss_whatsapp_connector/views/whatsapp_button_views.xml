@@ -8,20 +8,54 @@
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='image_1920']" position="before">
                     <div class="oe_button_box" name="button_box">
-                        <button name="contacts_whatsapp" string="Whatsapp Message" type="object" class="oe_stat_button" icon="fa-whatsapp" style="background-color:#b7ff8a"/>
+                        <button name="contacts_whatsapp" string="Whatsapp Message" type="object" class="oe_stat_button"
+                                icon="fa-whatsapp" style="background-color:#b7ff8a"/>
                     </div>
                 </xpath>
             </field>
         </record>
+
         <record id="whatsapp_crm_view_form" model="ir.ui.view">
             <field name="name">whatsapp.view.form.inherit.crm</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="arch" type="xml">
                 <header>
-                    <button name="crm_whatsapp" string="Send Whatsapp" type="object" class="btn-secondary" icon="fa-whatsapp" style="background-color:#b7ff8a"/>
+                    <button name="crm_whatsapp" string="Send Whatsapp" type="object" class="btn-secondary"
+                            icon="fa-whatsapp" style="background-color:#b7ff8a"/>
                 </header>
             </field>
         </record>
+
+        <record id="whatsapp_employee_view_form" model="ir.ui.view">
+            <field name="name">whatsapp.view.form.inherit.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <header>
+                    <button name="employee_whatsapp" string="Send Whatsapp" type="object" class="btn-secondary"
+                            icon="fa-whatsapp" style="background-color:#b7ff8a"/>
+                </header>
+            </field>
+        </record>
+
+        <record id="whatsapp_student_view_form" model="ir.ui.view">
+            <field name="name">whatsapp.view.form.inherit.employee</field>
+            <field name="model">op.student</field>
+            <field name="inherit_id" ref="openeducat_core.view_op_student_form"/>
+            <field name="arch" type="xml">
+<!--                <header>-->
+<!--                    <button name="student_whatsapp" string="Send Whatsapp" type="object" class="btn-secondary"-->
+<!--                            icon="fa-whatsapp" style="background-color:#b7ff8a"/>-->
+<!--                </header>-->
+                <xpath expr="//div[@name='smart_button']" position="inside">
+<!--                    <div class="oe_button_box" name="button_box">-->
+                        <button name="student_whatsapp" string="Whatsapp Message" type="object" class="oe_stat_button"
+                                icon="fa-whatsapp" style="background-color:#b7ff8a"/>
+<!--                    </div>-->
+                </xpath>
+            </field>
+        </record>
+
     </data>
 </odoo>

@@ -11,7 +11,7 @@
     'description': """Whatsapp Odoo Connector""",
     'category': 'Connector',
     'depends': [
-        'base', 'contacts', 'crm'
+        'base', 'contacts', 'crm', 'hr', 'openeducat_core'
     ],
     'data': [
         'security/ir.model.access.csv',
