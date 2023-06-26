@@ -4,47 +4,50 @@
 <!--        <t t-name="openeducat_evaluacion.report_credencial_template_website">-->
              <t t-call="portal.portal_layout">
                 <t t-foreach="docs" t-as="o">
-                    <div class="row">
+                    <div class="page">
 
-                        <div class="col-sm-4">
-                            <table align="left" width="256" height="241" border="1" style="font-family: Open Sans;  border: 1px solid black;">
+                        <div class="table-responsive">
+                            <table align="left" width="305" height="490" border="1"
+                                   style="font-family: Open Sans;  border: 1px solid black;">
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <table width="256" border="0" valing="top" style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
+                                            <table width="305" height="490" border="0" valing="top"
+                                                   style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
                                                 <tbody>
                                                     <tr>
                                                         <td style="height:60px">
                                                             <center>
-                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/logoblancoe.png" style="width:90px; height: 50px"/>
+                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/logoblancoe.png"
+                                                                     style="width:90px; height: 50px"/>
                                                             </center>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="color: #fff; font-size: 6px">
+                                                        <td style="color: #fff; font-size: 6px" >
                                                             <center>
-                                                                <strong>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA<br/><br/></strong>
-<!--                                                                <p>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA</p>-->
-<!--                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png"/>-->
+                                                                <strong>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA<br /><br /></strong>
                                                             </center>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
                                                             <center>
-
-                                                             <img t-att-src="image_data_uri(o.image_1920)" style="width:120px; height: 145px; border: 5px solid white;"/>
+                                                                <img t-attf-src="data:image/*;base64,{{o.image_1920}}"
+                                                                     style="width:130px; height: 140px; border: 5px solid white;"/>
                                                             </center>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <div style="color:white;padding: 5px 0px 5px 0px" class="text-center">
-                                                                <span class="badge badge-pill" style="font-size:16px; background-color:#35455E; width:165px; padding-top: 9px; padding-bottom: 9px">
+                                                            <div style="color:white;padding: 5px 0px 5px 0px"
+                                                                 class="text-center">
+                                                                <span class="badge badge-pill"
+                                                                      style="font-size:16px; background-color:#35455E; width:165px; padding-top: 9px; padding-bottom: 9px">
                                                                     ALUMNO
                                                                 </span>
                                                             </div>
-                                                            <h1 style="font-size:14px; color:#fff">
+                                                            <h1 style="font-size:14px; color:#fff;padding: 5px 0px 5px 0px">
                                                                 <center>
                                                                     <strong>
                                                                         <span t-field="o.category_id.code"/>
@@ -58,8 +61,9 @@
                                                             <table width="100%" border="0">
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td valign="top" width="80%" style="font-size:10px; vertical-align:top;">
-                                                                            <div style="padding: 0px 5px 0px 5px">
+                                                                        <td valign="top" width="80%"
+                                                                            style="font-size:10px; vertical-align:top;">
+                                                                            <div style="padding: 0px 5px 0px 20px">
                                                                                 <strong>Nombre Completo:</strong>
                                                                                 <br/>
                                                                                 <span t-field="o.name"/>
@@ -79,7 +83,9 @@
                                                                         </td>
                                                                         <td width="20%">
                                                                             <center>
-                                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}" align="absmiddle" style="margin-top:5px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/>
+                                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"
+                                                                                     align="absmiddle"
+                                                                                     style="margin-top:5px; margin-bottom:5px; margin-right: 10px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/>
                                                                             </center>
                                                                         </td>
                                                                     </tr>
@@ -92,27 +98,33 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height="10" style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"/>
+                                        <td height="20"
+                                            style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;">
+
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div class="col-sm-0"></div>
+                        <br></br>
 
-                        <div class="col-sm-4">
+                        <div class="table-responsive">
 
-                            <table width="256" height="241" border="1" align="left" cellpadding="0" cellspacing="0" style="font-family: Open Sans;  border: 1px solid black;">
+                            <table width="305" height="490" border="1" align="left" cellpadding="0" cellspacing="0"
+                                   style="font-family: Open Sans;  border: 1px solid black;">
                                 <tr>
                                     <td>
-                                        <table width="256" border="0" cellpadding="0" cellspacing="0">
+                                        <table width="305" height="490" border="0" cellpadding="0" cellspacing="0">
                                             <tr>
-                                                <td width="80" style="background-image:url('/openeducat_credenciales/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/openeducat_credenciales/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
+                                                <td width="80"
+                                                    style="background-image:url('/openeducat_credenciales/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/openeducat_credenciales/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
                                                 <td>
                                                     <table border="0" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td>
                                                                 <div align="center">
-                                                                    <img t-attf-src="/openeducat_credenciales/static/src/img/logocolor.png" style="width:100px; height:70px"/>
+                                                                    <img t-attf-src="/openeducat_credenciales/static/src/img/logocolor.png"
+                                                                         style="width:100px; height:70px"/>
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -141,7 +153,7 @@
                                                                     <span t-field="o.vigencia_credencial"/>
                                                                     <br/>
                                                                     <br/>
-                                                                    <p style="font-style: italic;font-size:8px;text-align:justify">
+                                                                    <p style="font-style: italic; width:180px;font-size:8px;text-align:justify">
                                                                         "Esta credencial es personal e intransferible y
                                                                         de exclusiva responsabilidad del estudiante.
                                                                         Cualquier asunto sobre el mismo pueden enviarnos
@@ -153,12 +165,15 @@
                                                         </tr>
                                                         <tr>
                                                             <td>
-                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}" align="absmiddle" style="margin-top:-10px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
+                                                                <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"
+                                                                     align="absmiddle"
+                                                                     style="margin-top:-10px; margin-bottom:5px; margin-right: 0px;width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
                                                             </td>
                                                             <tr>
                                                                 <td>
-                                                                    <strong/>
-                                                                    <span align="absmiddle" style="vertical-align:middle;padding: 0px 5px 0px 5px; float:right;font-size:8px;">
+                                                                    <strong></strong>
+                                                                    <span align="absmiddle"
+                                                                          style="vertical-align:middle;padding: 0px 10px 0px 5px; float:right;font-size:8px;">
                                                                         https://uidr.mx/
                                                                     </span>
                                                                     <br/>
@@ -174,11 +189,6 @@
                                 </tr>
                             </table>
 
-                        </div>
-                        <br/>
-                        <div>
-                            <br/><br/><br/><br/><br/><br/><br/><br/>
-                            <a class="btn btn-secondary btn-block o_print_btn o_portal_invoice_print" t-attf-href="/report/pdf/openeducat_credenciales.report_credencial_template/#{user_id.user_line.id}" id="print_invoice_credencial" title="Descargar" target="_blank"><i class="fa fa-download"/>     Descargar </a>
                         </div>
                     </div>
                 </t>

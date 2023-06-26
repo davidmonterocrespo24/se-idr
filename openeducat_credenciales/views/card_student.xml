@@ -22,7 +22,7 @@
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <table width="256" border="0" valing="top"
+                                            <table width="305" height="490" border="0" valing="top"
                                                    style="background-image:url('/openeducat_credenciales/static/src/img/figurafrontala.png');background-position: center;background-size: cover;">
                                                 <tbody>
                                                     <tr>
@@ -37,8 +37,6 @@
                                                         <td style="color: #fff; font-size: 6px" >
                                                             <center>
                                                                 <strong>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA<br /><br /></strong>
-<!--                                                                <p>INSTITUTO SUPERIOR PARA EL DE DESARROLLO DE LA ROBÓTICA</p>-->
-<!--                                                                <img t-attf-src="/openeducat_credenciales/static/src/img/titlea.png"/>-->
                                                             </center>
                                                         </td>
                                                     </tr>
@@ -46,7 +44,7 @@
                                                         <td>
                                                             <center>
                                                                 <img t-attf-src="data:image/*;base64,{{o.image_1920}}"
-                                                                     style="width:120px; height: 165px; border: 5px solid white;"/>
+                                                                     style="width:130px; height: 140px; border: 5px solid white;"/>
                                                             </center>
                                                         </td>
                                                     </tr>
@@ -59,7 +57,7 @@
                                                                     ALUMNO
                                                                 </span>
                                                             </div>
-                                                            <h1 style="font-size:14px; color:#fff">
+                                                            <h1 style="font-size:14px; color:#fff;padding: 5px 0px 5px 0px">
                                                                 <center>
                                                                     <strong>
                                                                         <span t-field="o.category_id.code"/>
@@ -75,7 +73,7 @@
                                                                     <tr>
                                                                         <td valign="top" width="80%"
                                                                             style="font-size:10px; vertical-align:top;">
-                                                                            <div style="padding: 0px 5px 0px 5px">
+                                                                            <div style="padding: 0px 5px 0px 20px">
                                                                                 <strong>Nombre Completo:</strong>
                                                                                 <br/>
                                                                                 <span t-field="o.name"/>
@@ -97,7 +95,7 @@
                                                                             <center>
                                                                                 <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"
                                                                                      align="absmiddle"
-                                                                                     style="margin-top:5px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/>
+                                                                                     style="margin-top:5px; margin-bottom:5px; margin-right: 10px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px"/>
                                                                             </center>
                                                                         </td>
                                                                     </tr>
@@ -111,7 +109,9 @@
                                     </tr>
                                     <tr>
                                         <td height="20"
-                                            style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;"></td>
+                                            style="background-image:url('/openeducat_credenciales/static/src/img/banner.png');background-position: center;background-size: cover;">
+
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -120,11 +120,11 @@
 
                         <div class="table-responsive">
 
-                            <table width="256" height="241" border="1" align="left" cellpadding="0" cellspacing="0"
+                            <table width="305" height="490" border="1" align="left" cellpadding="0" cellspacing="0"
                                    style="font-family: Open Sans;  border: 1px solid black;">
                                 <tr>
                                     <td>
-                                        <table width="256" border="0" cellpadding="0" cellspacing="0">
+                                        <table width="305" height="490" border="0" cellpadding="0" cellspacing="0">
                                             <tr>
                                                 <td width="80"
                                                     style="background-image:url('/openeducat_credenciales/static/src/img/figuralaterala.png');background-position: center;background-size: cover;"><!--<img t-attf-src="/openeducat_credenciales/static/src/img/figuralaterala.png" width="91" height="420" />--></td>
@@ -163,7 +163,7 @@
                                                                     <span t-field="o.vigencia_credencial"/>
                                                                     <br/>
                                                                     <br/>
-                                                                    <p style="font-style: italic;font-size:8px;text-align:justify">
+                                                                    <p style="font-style: italic; width:180px;font-size:8px;text-align:justify">
                                                                         "Esta credencial es personal e intransferible y
                                                                         de exclusiva responsabilidad del estudiante.
                                                                         Cualquier asunto sobre el mismo pueden enviarnos
@@ -177,13 +177,13 @@
                                                             <td>
                                                                 <img t-attf-src="data:image/*;base64,{{o.category_id.imagen_qr}}"
                                                                      align="absmiddle"
-                                                                     style="margin-top:-10px; margin-bottom:5px; width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
+                                                                     style="margin-top:-10px; margin-bottom:5px; margin-right: 0px;width:100px;height:100px; vertical-align:middle;padding: 10px 5px 0px 5px; float:right;"/>
                                                             </td>
                                                             <tr>
                                                                 <td>
                                                                     <strong></strong>
                                                                     <span align="absmiddle"
-                                                                          style="vertical-align:middle;padding: 0px 5px 0px 5px; float:right;font-size:8px;">
+                                                                          style="vertical-align:middle;padding: 0px 10px 0px 5px; float:right;font-size:8px;">
                                                                         https://uidr.mx/
                                                                     </span>
                                                                     <br/>
