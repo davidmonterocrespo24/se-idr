@@ -37,7 +37,7 @@ class WhatsappEmployee(models.Model):
                 'target': 'new',
                 'view_mode': 'form',
                 'view_type': 'form',
-                'context': {'default_user_id': self.user_partner_id.id},
+                'context': {'default_user_id': self.address_home_id.id},
                 }
 
 class WhatsappStudent(models.Model):
